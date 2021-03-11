@@ -1,3 +1,10 @@
+---
+title: JS——Set和Get
+sidebar: 'auto'
+categories:
+ - JavaScript
+---
+
 对象的 `set get` 是es5的中对象的特性，使用示例：
 
 在初始化对象的时候这样使用

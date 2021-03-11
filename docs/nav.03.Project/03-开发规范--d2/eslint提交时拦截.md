@@ -1,3 +1,9 @@
+---
+title: eslint 提交时拦截
+sidebar: 'auto'
+categories:
+ - 开发规范
+---
 1. 是什么？
    1. 一个npm包，可以对代码风格和基础语法作检查，实时报错提示
 2. 好处

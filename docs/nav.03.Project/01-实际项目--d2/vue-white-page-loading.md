@@ -1,3 +1,9 @@
+---
+title: Vue首屏加载优化项目实践
+sidebar: 'auto'
+categories:
+ - 实际项目
+---
 > 提升90%加载速度——vuecli下的首屏性能优化
 > 
 > [链接](https://segmentfault.com/a/1190000019499007)

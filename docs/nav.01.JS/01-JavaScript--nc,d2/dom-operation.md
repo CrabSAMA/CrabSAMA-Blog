@@ -1,3 +1,10 @@
+---
+title: DOM操作
+sidebar: 'auto'
+categories:
+ - JavaScript
+---
+
 HTML文档被浏览器解析后是一颗DOM树，要改变HTML的结果，可以通过JavaScript来操作DOM。 
 DOM是一个属性结构，操作DOM就是这几个操作：
 

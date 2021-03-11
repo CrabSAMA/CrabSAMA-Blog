@@ -1,3 +1,10 @@
+---
+title: JavaScript语言精粹：继承
+sidebar: 'auto'
+categories:
+ - JavaScript
+---
+
 两种实现方式：
 
 *   伪类

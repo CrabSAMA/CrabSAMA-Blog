@@ -1,3 +1,9 @@
+---
+title: boolean类型转换
+sidebar: 'auto'
+categories:
+ - 笔试题
+---
 ```html
 <html>
 	<body>

@@ -1,3 +1,11 @@
+---
+title: JavaScript 代码规范
+sidebar: 'auto'
+categories:
+ - 开发规范
+ - JavaScript
+---
+
 *一种写JavaScript更合理的代码风格。*
 
 ## 命名规范

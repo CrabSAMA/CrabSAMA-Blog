@@ -1,3 +1,10 @@
+---
+title: js类型转换
+sidebar: 'auto'
+categories:
+ - 笔试题
+ - JavaScript
+---
 ```javascript
 console.log((\[\])?true:false); 
 console.log((\[\]==false?true:false)); 

@@ -1,3 +1,10 @@
+---
+title: 浏览器对象
+sidebar: 'auto'
+categories:
+ - JavaScript
+---
+
 ## window——不但充当全局作用域，而且表示浏览器窗口
 
 `innerWidth / innerHeight`  
