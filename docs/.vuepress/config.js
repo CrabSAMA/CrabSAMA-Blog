@@ -11,7 +11,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/public/favicon.ico' }]
   ],
-  base: '/',
+  base: '/CrabSAMA-Blog/',
   theme: 'reco',
   themeConfig: {
     logo: '/assets/img/logoa.png',
