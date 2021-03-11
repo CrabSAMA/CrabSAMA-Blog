@@ -1,4 +1,4 @@
-## Prototype
+# Prototype
 
 > 帮你彻底搞懂JS中的PROTOTYPE、\_\_PROTO\_\_与CONSTRUCTOR（图解）
 > 
@@ -44,6 +44,6 @@ console.log(Person.prototype.constructor);
 console.log(Person);
 ```
 
-![](~@img/prototype.png)
+![](./img/prototype.png)
 
 <center>运行结果</center>

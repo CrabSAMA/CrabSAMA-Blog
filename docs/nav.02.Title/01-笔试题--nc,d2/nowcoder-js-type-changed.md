@@ -34,7 +34,7 @@ console.log(({}==false)?true:false); // => console.log((NaN==0)?true:false);
 
 
 
-#### 《JavaScript权威指南》的部分相关知识点
+## 《JavaScript权威指南》的部分相关知识点
 
 * * *
 
