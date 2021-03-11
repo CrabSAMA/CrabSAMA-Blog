@@ -28,6 +28,7 @@ module.exports = {
   //   sidebarDepth: 2
   // },
   plugins: [
+    '@vuepress/medium-zoom',
     'permalink-pinyin', 
     [
       'autobar', 
