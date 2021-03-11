@@ -1,5 +1,3 @@
-# JS-Proxy
-
 > Proxy 用于修改某些操作的`默认行为`（基本操作有属性查找，赋值，枚举，函数调用等）。
 > 
 > [链接](https://segmentfault.com/a/1190000019675719?utm_source=tag-newest)

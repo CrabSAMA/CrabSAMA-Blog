@@ -1,5 +1,3 @@
-# Prototype
-
 > 帮你彻底搞懂JS中的PROTOTYPE、\_\_PROTO\_\_与CONSTRUCTOR（图解）
 > 
 > [CSDN链接](https://blog.csdn.net/cc18868876837/article/details/81211729)

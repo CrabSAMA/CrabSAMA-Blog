@@ -1,5 +1,3 @@
-# 牛客——JS类型转换
-
 ```javascript
 console.log((\[\])?true:false); 
 console.log((\[\]==false?true:false)); 

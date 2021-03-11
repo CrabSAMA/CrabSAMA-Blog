@@ -1,5 +1,3 @@
-# 牛客笔试题——boolean类型转换
-
 ```html
 <html>
 	<body>
