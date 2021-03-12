@@ -30,7 +30,12 @@ module.exports = {
   //   sidebarDepth: 2
   // },
   plugins: [
-    '@vuepress/medium-zoom',
+    [
+      '@vuepress/medium-zoom',
+      {
+        selector: '.theme-reco-content :not(a) > img'
+      }
+    ],
     'permalink-pinyin', 
     [
       'autobar', 
