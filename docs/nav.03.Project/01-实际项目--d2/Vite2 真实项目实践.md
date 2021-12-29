@@ -62,7 +62,32 @@ npm run dev
 - package.json：复制粘贴所有的 `dependencies`，`devDependencies`中除去 `webpack`,`vuecli`相关的依赖，其余复制粘贴即可（包括你需要用到的预处理器等）
 - vue.config.js：这个是大头，需要注意，下面单独开一个小标题进行描述。
 
-#### vue.config.js -> vite.config.js
+#### `package.json`
+
+```json
+{
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  }
+}
+```
+
+↓
+
+```json
+{
+  "scripts": {
+    "serve": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+  }
+}
+```
+
+#### `vue.config.js` -> vite.config.js
 
 新建完项目后我们会得到一个清爽的配置文件：
 
@@ -143,3 +168,188 @@ export default defineConfig({
 ### 错误提示有待提升
 
 相比于 `VueCli`，`Vite`的错误提示并不是十分友好，有些时候页面也不报错，控制台也不报错。这种情况可以针对上面提到的点，在代码中打断点调试一下。有可能在一些 utils 中使用了某些不支持的语法，但得益于 js “强大的”的错误兜底机制，错误并没有被捕获到，可以在一些有疑问的地方加个 try-catch 块看看。
+
+### Webpack 分包打包
+
+配置 `build.rollupOptions.output.manualChunks` 属性即可。
+
+```typescript
+// vite.config.js
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('echarts')) {
+            return 'echarts'
+          } else if (id.includes('ant-design-vue')) {
+            return 'ant-design-vue'
+          } else if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        }
+      }
+    }
+  }
+})
+```
+
+### HtmlTemplatePlugin 移植
+
+安装 `vite-plugin-html-template` 插件，[NPM地址](https://www.npmjs.com/package/vite-plugin-html-template)
+
+```typescript
+// vite.config.js
+export default defineConfig({
+  plugins: [
+    htmlTemplate({
+      data: {
+        title: '云台'
+      }
+    })
+  ]
+})
+
+```
+
+使用 EJS 语法（[文档](https://ejs.bootcss.com/#docs)）写 template 即可，在 htmlTemplate Plugin 中导出的值会自动输出到 html 文件中。
+
+```html
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= title %> doesn't work properly without JavaScript enabled. Please
+        enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+  </body>
+</html>
+```
+
+### 组件库按需引入（替代`babel-plugin-import`）
+
+安装 `unplugin-vue-components` 插件，[NPM地址](https://www.npmjs.com/package/unplugin-vue-components)
+
+以 `ant-design-vue` 为例，配置如下：
+
+```typescript
+// vite.config.js
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+
+// your plugin installation
+Components({
+  resolvers: [
+    AntDesignVueResolver()
+  ]
+})
+```
+
+配置完成后如果没有其他需求，即可享受开箱即用的按需引入方式，插件会帮忙进行自动转化。
+
+#### 如果你有配置主题的需求
+
+你会发现使用这个插件之后，配置的主题是失效的。我们需要在配置中添加以下属性，使引入的样式文件是 `less` 文件，实现主题配置。
+
+```typescript
+// your plugin installation
+Components({
+  resolvers: [
+    AntDesignVueResolver({
+      // 引入 less 样式文件 而不是编译后的 css
+      importStyle: 'less'
+    })
+  ]
+})
+```
+
+### `require.context`批量引入
+
+由于没有了 `node` 环境，因此 `require` 在代码中也不能使用了，`Vite` 官方提供的一个替代方法是 `import.meta.glob`。（[文档](https://cn.vitejs.dev/guide/features.html#glob-import)）
+
+这里有一个题外话，如果项目中有使用 `typescript` 的话，会发现 `import.meta.glob` 会报 `import 上找不到 meta 属性`，解决方法也很简单，在 `tsconfig.json` 文件中的 `types` 属性中插入 `"vite/client"` 这一项即可。
+
+下面是一个批量引入某个文件夹中所有 Vue 组件的例子：
+
+```typescript
+// require.context 写法
+const context = require.context('./', true, /\.vue$/)
+
+const components = {}
+
+context.keys().forEach((key) => {
+  const component = context(key).default
+  components[key.replace('./', '').replace('.vue', '')] = component
+})
+
+export default components
+```
+
+```typescript
+// import.meta.glob 写法
+const context = import.meta.globEager('./*.vue')
+
+const components = {}
+
+for (const key in context) {
+  components[key.replace('./', '').replace('.vue', '')] = context[key].default
+}
+
+export default components
+```
+
+### `require`引入静态文件
+
+在项目中时常有通过 `require` 引入静态文件（如图片、js文件等）的需求，在没有了 `node` 环境后，`require` 不能用了，`Vite` 提供了新的静态资源处理方法。（[文档](https://cn.vitejs.dev/guide/assets.html)）
+
+这里举一个引入 js 文件的例子，其他情况可以参考文档：
+
+```typescript
+// require 写法
+let MyIconFont = createFromIconfontCN({
+  // scriptUrl: '//at.alicdn.com/t/font_2827954_m2dc4k98x4b.js'
+  scriptUrl: require('/public/iconfont.js')
+})
+```
+
+```typescript
+// Vite import 写法
+import iconfontJs from '@/assets/iconfont.js?url'
+let MyIconFont = createFromIconfontCN({
+  scriptUrl: iconfontJs
+})
+```
+
+### `tailwindcss` 样式优先级低
+
+虽然感觉不是 `Vite` 的问题，但是 `Webpack` 下正常，`Vite` 中 `tailwindcss` 样式优先级就低于组件库的样式了，权当是 `Vite` 中的一个坑处理吧~
+
+解决方法也很简单，在**高于3.0**的 `tailwindcss` 中，在 `tailwindcss.config.js` 文件中新增一个 `important: '#app'` 即可。具体内部实现就是 `tailwindcss` 在生成 css 时，每一个属性前面添加了一个 `#app` 选择器，又因为 id 选择器的高优先级，使得 `tailwindcss` 的样式拥有了较高的优先级。（[文档](https://tailwindcss.com/docs/configuration#important)）
+
+### 使用按需引入时一直报 find new dependency
+
+安装 `vite-plugin-optimize-persist` 和 `vite-plugin-package-config` 两个插件，并引入：
+
+```javascript
+// vite.config.js
+import OptimizationPersist from 'vite-plugin-optimize-persist'
+import PkgConfig from 'vite-plugin-package-config'
+
+// your plugin installation
+plugins: [
+  PkgConfig(),
+  OptimizationPersist()
+]
+```
+
+这个插件实现的功能是在每次找到新的依赖时，将其添加到 `Vite` 配置中的 `optimizeDeps.include` 属性，以保证第二次访问时 `Vite` 不会再重新编译为 `ES Module`。
