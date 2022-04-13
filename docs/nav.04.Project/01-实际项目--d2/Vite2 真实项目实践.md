@@ -144,8 +144,8 @@ export default defineConfig({
 
 由于脱离了 `webpack` 环境，`Vite2` 将代码直接托管至浏览器，因此我们不能在代码中使用 nodejs 的 `require` 和 `module.export` 来进行模块的导出导入了。取而代之的是，将代码中有用到的地方改成原生 ES Module 方式。
 
-- require('module') -> import * from 'module'
-- module.export -> export { xx }, export default xx
+- `require('module')` -> `import * from 'module'`
+- `module.export` -> `export { xx }, export default xx`
 
 #### 尽可能地在 import 时将文件后缀补全
 
@@ -153,15 +153,15 @@ export default defineConfig({
 
 #### `path`等 nodejs 原生模块不能使用
 
-由于脱离了 webpack 环境，在项目代码中不可以直接使用 `const path = require('path')`的方式来使用 `path` 等模块了，会报 `Module "path" has been externalized for browser compatibility and cannot be accessed in client code.`的错误。不过在现有项目中还是有很多地方用到 `path` 的，因此我的解决方案是通过 [`path-browserify`](https://www.npmjs.com/package/path-browserify)来解决，安装了该包后，将项目中用到 path 的地方换成 `import path from 'path-browserify'` 即可。
+由于脱离了 `webpack` 环境，在项目代码中不可以直接使用 `const path = require('path')`的方式来使用 `path` 等模块了，会报 `Module "path" has been externalized for browser compatibility and cannot be accessed in client code.`的错误。不过在现有项目中还是有很多地方用到 `path` 的，因此我的解决方案是通过 [`path-browserify`](https://www.npmjs.com/package/path-browserify)来解决，安装了该包后，将项目中用到 `path` 的地方换成 `import path from 'path-browserify'` 即可。
 
 ### 完成
 
-在修改完上述问题后，可以重启一下 Vite 的服务器，看看效果，一般不会出现特别大的问题。这也是 `Vite2` 做得比较好的地方，方便用户可以比较轻松地迁移~
+在修改完上述问题后，可以重启一下 `Vite` 的服务器，看看效果，一般不会出现特别大的问题。这也是 `Vite2` 做得比较好的地方，方便用户可以比较轻松地迁移~
 
 <center><img src="./img/QQ20210312-143200-HD.gif"></img></center>
 
-来看一下运行效果，相较于 VueCli，确实现在是秒开，HMR也十分快！
+来看一下运行效果，相较于 `VueCli`，确实现在是秒开，HMR也十分快！
 
 ## 踩坑点
 
@@ -275,7 +275,7 @@ Components({
 
 ### `require.context`批量引入
 
-由于没有了 `node` 环境，因此 `require` 在代码中也不能使用了，`Vite` 官方提供的一个替代方法是 `import.meta.glob`。（[文档](https://cn.vitejs.dev/guide/features.html#glob-import)）
+由于没有了 `node` 环境，因此 `require.context` 在代码中也不能使用了，`Vite` 官方提供的一个替代方法是 `import.meta.glob`。（[文档](https://cn.vitejs.dev/guide/features.html#glob-import)）
 
 这里有一个题外话，如果项目中有使用 `typescript` 的话，会发现 `import.meta.glob` 会报 `import 上找不到 meta 属性`，解决方法也很简单，在 `tsconfig.json` 文件中的 `types` 属性中插入 `"vite/client"` 这一项即可。
 
@@ -336,7 +336,7 @@ let MyIconFont = createFromIconfontCN({
 
 解决方法也很简单，在**高于3.0**的 `tailwindcss` 中，在 `tailwindcss.config.js` 文件中新增一个 `important: '#app'` 即可。具体内部实现就是 `tailwindcss` 在生成 css 时，每一个属性前面添加了一个 `#app` 选择器，又因为 id 选择器的高优先级，使得 `tailwindcss` 的样式拥有了较高的优先级。（[文档](https://tailwindcss.com/docs/configuration#important)）
 
-### 使用按需引入时一直报 find new dependency
+### 使用按需引入时一直报 `find new dependency`
 
 安装 `vite-plugin-optimize-persist` 和 `vite-plugin-package-config` 两个插件，并引入：
 
@@ -353,3 +353,33 @@ plugins: [
 ```
 
 这个插件实现的功能是在每次找到新的依赖时，将其添加到 `Vite` 配置中的 `optimizeDeps.include` 属性，以保证第二次访问时 `Vite` 不会再重新编译为 `ES Module`。
+
+> 2022年04月13日更新：
+>
+> 在 `Vite` 更新到 `2.9.1` 后，上述问题解决，可以不用引入这两个插件了，作者仓库也标注归档了。
+>
+> 在第一次启动项目或删除 `node_modules` 时，会对依赖进行预构建；在进入新页面时按需引入了新组件，也会对依赖进行预构建，构建完成后将会自动刷新页面，属于正常现象。
+
+### 分包后打包，preview 报错
+
+`vite preview` 时报错：`Uncaught TypeError: Cannot read properties of undefined (reading 'prototype')`
+
+经查看后怀疑是 `ant-design-vue` 版本的问题，更新了 `ant-design-vue` 到最新版本后，出现新的错误：`Cannot access 'isFunction' before initialization`
+
+因为 `isFunction` 是 `@vue/core` 中内置的方法，猜测是**分包**导致的问题，后续尝试将 `vite.config.ts` 中的 `build` 选项中分包相关的配置清空，这个问题告一段落。
+
+### 引用的包中 `esm` 与 `commonjs` 语法混用，报错
+
+由于系统使用了我自己开发的一个 `npm` 包，里面有部分代码是直接引用第三方组件的，其中还有 `commonjs` 的 `require` 语法，因此进入系统时就会报错：`ReferenceError: require is not defined`。
+
+查询资料后得知 `rollup` 有个 `@rollup/plugin-commonjs` 的插件，可以解决这个问题，只需要在 vite.config.ts 中设置 `build.commonjsOptions.transformMixedEsModules: true` 即可，但是在这样设置后我这边依旧会报错：`Uncaught ReferenceError: exports is not defined`。
+
+最后由于这个包是我自己开发的，我在这个包的 `rollup` 打包配置中引入了 `@rollup/plugin-commonjs` 并配置 `transformMixedEsModules: true`，将打包出来的 `require` 转成 `esm` 的 `import` 用法，然后去除上面的 `build.commonjsOptions.transformMixedEsModules: true` ，报错解除，可以正常进入页面了。
+
+### 资源用 `cdn` 引入，报错 `Uncaught TypeError: Failed to resolve module specifier “echarts”. Relative references must start with either “/”, “./”, or “…/”.`
+
+仍未解决，TODO~
+
+### 打包时出现 `warning: "@charset" must be the first rule in the file` 警告
+
+要么就在 `vite.config.ts` 中加入 `postcssPlugin: 'internal:charset-removal’`，但是会丢失 `tailwindcss`，这个具体要研究 `postcss.config.js` 怎么配置才能达到效果。
