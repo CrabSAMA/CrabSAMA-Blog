@@ -372,7 +372,7 @@ plugins: [
 
 由于系统使用了我自己开发的一个 `npm` 包，里面有部分代码是直接引用第三方组件的，其中还有 `commonjs` 的 `require` 语法，因此进入系统时就会报错：`ReferenceError: require is not defined`。
 
-查询资料后得知 `rollup` 有个 `@rollup/plugin-commonjs` 的插件，可以解决这个问题，只需要在 vite.config.ts 中设置 `build.commonjsOptions.transformMixedEsModules: true` 即可，但是在这样设置后我这边依旧会报错：`Uncaught ReferenceError: exports is not defined`。
+查询资料后得知 `rollup` 有个 `@rollup/plugin-commonjs` 的插件，可以解决这个问题，只需要在 `vite.config.ts` 中设置 `build.commonjsOptions.transformMixedEsModules: true` 即可，但是在这样设置后我这边依旧会报错：`Uncaught ReferenceError: exports is not defined`。
 
 最后由于这个包是我自己开发的，我在这个包的 `rollup` 打包配置中引入了 `@rollup/plugin-commonjs` 并配置 `transformMixedEsModules: true`，将打包出来的 `require` 转成 `esm` 的 `import` 用法，然后去除上面的 `build.commonjsOptions.transformMixedEsModules: true` ，报错解除，可以正常进入页面了。
 
@@ -382,4 +382,28 @@ plugins: [
 
 ### 打包时出现 `warning: "@charset" must be the first rule in the file` 警告
 
-要么就在 `vite.config.ts` 中加入 `postcssPlugin: 'internal:charset-removal’`，但是会丢失 `tailwindcss`，这个具体要研究 `postcss.config.js` 怎么配置才能达到效果。
+要么就在 `vite.config.ts` 中加入 `postcssPlugin: 'internal:charset-removal’`，但是 `vite` 将不再去获取 `postcss.config.js` 中的配置，会丢失 `tailwindcss`，这个具体要研究 `postcss.config.js` 怎么配置才能达到效果。
+
+更新：
+
+```javascript
+// postcss.config.js
+module.exports = {
+  plugins: [
+    {
+      postcssPlugin: 'internal:charset-removal',
+      AtRule: {
+        charset: (atRule) => {
+          if (atRule.name === 'charset') {
+            atRule.remove()
+          }
+        }
+      }
+    },
+    require('tailwindcss'),
+    require('autoprefixer')
+  ]
+}
+
+```
+
