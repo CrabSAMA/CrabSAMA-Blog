@@ -159,7 +159,7 @@ export default defineConfig({
 
 在修改完上述问题后，可以重启一下 `Vite` 的服务器，看看效果，一般不会出现特别大的问题。这也是 `Vite2` 做得比较好的地方，方便用户可以比较轻松地迁移~
 
-<center><img src="./img/QQ20210312-143200-HD.gif"></img></center>
+<center><img src="./img/QQ20210312-143200-HD.gif"/></center>
 
 来看一下运行效果，相较于 `VueCli`，确实现在是秒开，HMR也十分快！
 

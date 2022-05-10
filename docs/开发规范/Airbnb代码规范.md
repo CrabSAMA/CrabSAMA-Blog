@@ -1,3 +1,9 @@
+---
+title: Airbnb JavaScript 代码规范
+categories:
+ - 开发规范
+---
+
 # Airbnb JavaScript 代码规范() {
 
 *一种写JavaScript更合理的代码风格。*
