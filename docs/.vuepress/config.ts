@@ -54,17 +54,6 @@ export default defineUserConfig<DefaultThemeOptions, WebpackBundlerOptions>({
   bundlerConfig: {
     configureWebpack: (config) => {
       config.resolve.alias['@img'] = resolve(__dirname, '../assets/img')
-    },
-    chainWebpack: (config, isServer) => {
-      const inlineLimit = 10000
-      config.module.rule('images')
-        .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
-        .use('url-loader')
-          .loader('url-loader')
-          .options({
-            limit: inlineLimit,
-            name: `assets/img/[name].[hash:8].[ext]`
-          })
     }
   }
 })
