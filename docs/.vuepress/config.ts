@@ -49,29 +49,7 @@ export default defineUserConfig<DefaultThemeOptions, WebpackBundlerOptions>({
   //   lastUpdated: 'Last Updated',
   //   sidebarDepth: 2
   // },
-  plugins: [
-    // [
-    //   '@vuepress/medium-zoom',
-    //   {
-    //     selector: '.theme-reco-content :not(a) > img'
-    //   }
-    // ],
-    // 'permalink-pinyin', 
-    // [
-    //   'autobar', 
-    //   { 
-    //     'pinyinNav': true,
-    //     'setHomepage': 'hide'
-    //   }
-    // ],
-    // ['rpurl', 
-    //   [
-    //     [/--nc,d2|--nc|--d2/gi, ''], 
-    //     [/nav[\.\-_]*\d*[\.\-_]*/gi, ''], 
-    //     [/\d+[\.\-_]*/gi, '']
-    //   ]
-    // ]
-  ],
+  plugins: [],
   bundler: '@vuepress/bundler-vite',
   bundlerConfig: {
     configureWebpack: (config) => {

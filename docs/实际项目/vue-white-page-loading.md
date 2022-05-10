@@ -16,7 +16,7 @@ categories:
 
 ![](./img/image.png)
 
-<center>未优化前</center>
+<p style="text-align: center;">未优化前</p> 
 
 可以看到的是，在没有优化前，chunk-vendors文件已经有6.25MB之大，而这个文件在每次打开页面的时候都会进行一次加载，从而导致加载时间巨久无比。
 
@@ -50,7 +50,7 @@ categories:
 
 ![](./img/image-5.png)
 
-<center>路由懒加载的不同写法</center>
+<p style="text-align: center;">路由懒加载的不同写法</p> 
 
 虽然是对route进行了处理，但是实际运行时，我还是发现在加载首页的时候，就加载了一堆不相关的chunk文件，实际上来说还是没有实际减少加载量的效果，这又是为什么呢？ 
 在查阅了[《提升90%加载速度——vuecli下的首屏性能优化》](https://segmentfault.com/a/1190000019499007)这篇文章后，我发现了一个概念：**prefetch**

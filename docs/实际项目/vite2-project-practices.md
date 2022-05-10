@@ -51,7 +51,7 @@ npm run dev
 
 ![image-20210312111118287](./img/image-20210312111118287.png)
 
-<center>左：VueCli4 项目 右：Vite2 + Vue 项目</center>
+<p style="text-align: center;">左：VueCli4 项目 右：Vite2 + Vue 项目</p> 
 
 ### 迁移项目代码
 
@@ -159,7 +159,7 @@ export default defineConfig({
 
 在修改完上述问题后，可以重启一下 `Vite` 的服务器，看看效果，一般不会出现特别大的问题。这也是 `Vite2` 做得比较好的地方，方便用户可以比较轻松地迁移~
 
-<center><img src="./img/QQ20210312-143200-HD.gif"/></center>
+<p style="text-align: center;"><img src="./img/QQ20210312-143200-HD.gif"/></p> 
 
 来看一下运行效果，相较于 `VueCli`，确实现在是秒开，HMR也十分快！
 

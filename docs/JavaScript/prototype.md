@@ -15,7 +15,7 @@ categories:
 
 ![](https://img-blog.csdnimg.cn/20190311194017886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NjMTg4Njg4NzY4Mzc=,size_16,color_FFFFFF,t_70#pic_center)
 
-<center>原型链解释图</center>
+<p style="text-align: center;">原型链解释图</p>
 
 * * *
 
@@ -50,4 +50,4 @@ console.log(Person);
 
 ![](./img/prototype.png)
 
-<center>运行结果</center>
+<p style="text-align: center;">运行结果</p>
