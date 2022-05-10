@@ -14,5 +14,5 @@ bannerBrand:
     borderRadius: '1rem'
   bgImage: '/assets/img/bg.svg'
   heroText: CrabSAMA's Blog
-  tagline: 记录程序狗的点点滴滴
+  tagline: 记录前端程序狗的点点滴滴
 ---

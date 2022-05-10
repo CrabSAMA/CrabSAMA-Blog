@@ -24,11 +24,19 @@ export default defineUserConfig<DefaultThemeOptions, WebpackBundlerOptions>({
     // autoAddCategoryToNavbar: true,
     style: '@vuepress-reco/style-default',
     logo: '/assets/img/logoa.png',
-    subSidebar: 'auto',
     authorAvatar: '/assets/img/logoa.png',
     navbar:[
-      { text: '首页', link: '/' },
-      { text: '分类', link: '/categories/JavaScript/1/' },
+      { text: 'CrabLoveWelcome', link: '/' },
+      { text: '分类',
+        children: [
+          { text: 'JavaScript', link: '/categories/JavaScript/1/' },
+          { text: 'TypeScript', link: '/categories/TypeScript/1/' },
+          { text: '前端工程化', link: '/categories/qianduangongchenghua/1/' },
+          { text: '笔试题', link: '/categories/bishiti/1/' },
+          { text: '开发规范', link: '/categories/kaifaguifan/1/' },
+          { text: '实际项目', link: '/categories/shijixiangmu/1/' },
+        ]
+      },
     ],
   },
   // themeConfig: {

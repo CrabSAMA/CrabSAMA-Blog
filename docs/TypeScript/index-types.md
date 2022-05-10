@@ -1,5 +1,5 @@
 ---
-title: TypeScript——索引类型
+title: 索引类型
 sidebar: 'auto'
 categories:
  - TypeScript

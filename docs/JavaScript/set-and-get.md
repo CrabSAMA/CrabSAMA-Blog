@@ -1,5 +1,5 @@
 ---
-title: JS——Set和Get
+title: Set和Get
 sidebar: 'auto'
 categories:
  - JavaScript

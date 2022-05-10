@@ -1,5 +1,5 @@
 ---
-title: JS——Proxy
+title: Proxy
 sidebar: 'auto'
 categories:
  - JavaScript

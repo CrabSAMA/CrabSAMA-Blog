@@ -1,5 +1,6 @@
 ---
 title: js类型转换
+lastUpdated: true
 sidebar: 'auto'
 categories:
  - 笔试题
