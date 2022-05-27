@@ -35,6 +35,7 @@ export default defineUserConfig<DefaultThemeOptions, WebpackBundlerOptions>({
           { text: '笔试题', link: '/categories/bishiti/1/' },
           { text: '开发规范', link: '/categories/kaifaguifan/1/' },
           { text: '实际项目', link: '/categories/shijixiangmu/1/' },
+          { text: '计算机网络', link: '/categories/jisuanjiwangluo/1' },
         ]
       },
     ],
