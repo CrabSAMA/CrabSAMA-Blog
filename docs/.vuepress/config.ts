@@ -37,7 +37,8 @@ export default defineUserConfig<DefaultThemeOptions, WebpackBundlerOptions>({
           { text: '实际项目', link: '/categories/shijixiangmu/1/' },
           { text: '计算机网络', link: '/categories/jisuanjiwangluo/1/' },
           { text: 'Node.js', link: '/categories/Node.js/1/' },
-          { text: 'Git', link: '/categories/git/1/' }
+          { text: 'Git', link: '/categories/git/1/' },
+          { text: 'HTML', link: '/categories/HTML/1/' }
         ]
       },
     ],
