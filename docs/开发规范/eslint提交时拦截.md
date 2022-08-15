@@ -10,12 +10,6 @@ categories:
    1. 解决代码风格不统一的问题
    2. 还可以检测到一些基础语法错误
 
-## 说在前面
-
-如果想了解如何在 IDE 中配置 eslint，可以看[这篇 wiki](https://wiki.huolala.work/pages/viewpage.action?pageId=45918046)。
-
-------
-
 ## 先看效果
 
 ![image-20201215152650015](./img/image-20201215152650015.png)
