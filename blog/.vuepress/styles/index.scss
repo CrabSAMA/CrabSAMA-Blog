@@ -1,0 +1,8 @@
+// place your custom styles here
+html[data-theme="light"] {
+  .blog-hero {
+      h1, .description {
+        color: black
+      }
+    }
+}

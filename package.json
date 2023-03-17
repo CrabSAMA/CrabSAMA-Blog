@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress dev blog",
+    "docs:build": "vuepress build blog",
+    "docs:clean-dev": "vuepress dev blog --clean-cache",
+    "docs:update-package": "pnpm dlx vp-update"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "2.0.0-beta.39",
-    "vuepress-plugin-permalink-pinyin": "^1.0.0",
-    "vuepress-theme-reco": "2.0.0-beta.5"
+    "@vuepress/client": "2.0.0-beta.61",
+    "vue": "^3.2.47",
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-theme-hope": "2.0.0-beta.193"
   }
 }
