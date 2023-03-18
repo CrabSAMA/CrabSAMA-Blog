@@ -6,7 +6,7 @@ category:
   - 经验
   - 前端开发
 tag:
-  - vue
+  - Vue
 ---
 ## vite + vue3 + typescript
 
