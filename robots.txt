@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://crabsama.github.io/CrabSAMA-Blog/sitemap.xml
+Sitemap: https://crabsama.github.io/CrabSAMA-Blog/CrabSAMA-Blog/sitemap.xml
