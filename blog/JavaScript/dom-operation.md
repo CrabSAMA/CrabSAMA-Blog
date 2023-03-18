@@ -1,8 +1,10 @@
 ---
 title: DOM操作
-sidebar: 'auto'
-categories:
- - JavaScript
+category:
+  - 前端开发
+tag:
+  - JavaScript
+  - 浏览器
 ---
 
 HTML文档被浏览器解析后是一颗DOM树，要改变HTML的结果，可以通过JavaScript来操作DOM。 

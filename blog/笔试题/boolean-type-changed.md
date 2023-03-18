@@ -1,8 +1,10 @@
 ---
 title: boolean类型转换
-sidebar: 'auto'
-categories:
- - 笔试题
+category:
+  - 前端开发
+  - 笔试题
+tag:
+  - JavaScript
 ---
 ```html
 <html>

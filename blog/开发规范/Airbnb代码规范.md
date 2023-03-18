@@ -1,9 +1,10 @@
 ---
 title: Airbnb JavaScript 代码规范
 date: 2021-11-03 15:33:40 +8
-lastUpdated: true
-categories:
- - 开发规范
+category:
+  - 前端开发
+tag:
+  - 开发规范
 ---
 
 # Airbnb JavaScript 代码规范() {

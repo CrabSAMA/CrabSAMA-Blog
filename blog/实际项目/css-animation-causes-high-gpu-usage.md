@@ -1,9 +1,12 @@
 ---
 title: css 动画导致 gpu 占用高
 date: 2022-12-02 16:15:00 +8
-lastUpdated: true
-categories:
+category:
   - 实际项目
+  - 前端开发
+tag:
+  - css
+  - 性能优化
 ---
 
 ## 背景

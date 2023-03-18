@@ -1,9 +1,10 @@
 ---
 title: Path路径
 date: 2020-07-09T09:28:55.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
 ---
 
 **官方文档：**<http://nodejs.org/api/path.html>

@@ -1,8 +1,10 @@
 ---
 title: 浏览器对象
-sidebar: 'auto'
-categories:
- - JavaScript
+category:
+  - 前端开发
+tag:
+  - JavaScript
+  - 浏览器
 ---
 
 ## window——不但充当全局作用域，而且表示浏览器窗口

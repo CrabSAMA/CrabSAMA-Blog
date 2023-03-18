@@ -1,8 +1,13 @@
 ---
 title: 监听文件变化自动生成 vue-router 路由配置
-sidebar: 'auto'
-categories:
- - 前端工程化
+date: 2020-12-29 14:58:51 +8
+category:
+  - 前端开发
+  - 轮子
+  - 前端工程化
+tag:
+  - 前端工程化
+  - Vue
 ---
 
 ## 使用前请看

@@ -1,11 +1,11 @@
 ---
 title: 常用命令
 date: 2020-06-09T20:34:44.0000000+08:00
-lastUpdated: true
-categories:
- - git
- - 实际项目
- - 经验
+category:
+  - 实际项目
+  - 经验
+tag:
+  - git
 ---
 
 ## 创建仓库

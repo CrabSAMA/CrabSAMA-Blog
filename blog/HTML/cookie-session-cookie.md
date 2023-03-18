@@ -1,9 +1,10 @@
 ---
 title: Cookie、Session、Token
 date: 2020-08-05T11:54:45.0000000+08:00
-lastUpdated: true
-categories:
- - HTTP
+category:
+  - 浏览器
+tag:
+  - 浏览器
 ---
 
 知乎链接：<https://zhuanlan.zhihu.com/p/152224669>

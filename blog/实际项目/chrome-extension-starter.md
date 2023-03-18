@@ -1,10 +1,12 @@
 ---
 title: 来写一个 chrome extension
 date: 2022-08-12 17:58:40 +8
-lastUpdated: true
-categories:
- - 实际项目
- - 经验
+category:
+  - 实际项目
+  - 经验
+  - 前端开发
+tag:
+  - 扩展程序
 ---
 
 > 照惯例，先上篇参考文章：

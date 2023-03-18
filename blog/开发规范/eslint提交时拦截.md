@@ -1,10 +1,12 @@
 ---
 title: eslint 提交时拦截
 date: 2021-11-03 15:33:40 +8
-lastUpdated: true
-sidebar: 'auto'
-categories:
+category:
+  - 前端开发
+  - 前端工程化
+tag:
   - 开发规范
+  - 前端工程化
 ---
 
 1. 是什么？

@@ -1,9 +1,12 @@
 ---
 title: Vue3 中 :deep() 选择器的坑
 date: 2022-11-29 18:09:00 +8
-lastUpdated: true
-categories:
+category:
   - 实际项目
+  - 前端开发
+tag:
+  - vue
+  - css
 ---
 
 举个例子，我们在 `.container` 类下面有一个 `iView` 的 `poptip` 组件，按往常我们的写法，都套一层 `:deep` 比较稳妥。

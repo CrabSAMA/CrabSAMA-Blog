@@ -1,8 +1,9 @@
 ---
 title: Proxy
-sidebar: 'auto'
-categories:
- - JavaScript
+category:
+  - 前端开发
+tag:
+  - JavaScript
 ---
 > Proxy 用于修改某些操作的`默认行为`（基本操作有属性查找，赋值，枚举，函数调用等）。
 > 

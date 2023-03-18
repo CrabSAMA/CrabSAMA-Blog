@@ -1,9 +1,10 @@
 ---
 title: 使用 nginx 实现内容替换
 date: 2022-07-28 17:19:53 +8
-lastUpdated: true
-categories:
- - 实际项目
+category:
+  - 实际项目
+tag:
+  - nginx
 ---
 
 ## 背景

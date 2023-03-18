@@ -1,8 +1,9 @@
 ---
 title: JavaScript语言精粹：继承
-sidebar: 'auto'
-categories:
- - JavaScript
+category:
+  - 前端开发
+tag:
+  - JavaScript
 ---
 
 两种实现方式：

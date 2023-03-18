@@ -1,9 +1,11 @@
 ---
 title: 迭代示例
 date: 2020-07-10T11:44:23.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
+  - 开发规范
 ---
 
 1.  确立需求

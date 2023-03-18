@@ -1,9 +1,12 @@
 ---
 title: Webpack Loader 与 Plugin
 date: 2022-06-27 16:43:39+08:00
-lastUpdated: true
-categories:
- - Webpack
+category:
+  - webpack
+  - 前端工程化
+tag:
+  - webpack
+  - 前端工程化
 ---
 
 [掘金参考文章](https://juejin.cn/post/7067051380803895310)

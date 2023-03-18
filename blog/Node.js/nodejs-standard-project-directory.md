@@ -1,9 +1,11 @@
 ---
 title: Node.js标准的工程目录
 date: 2020-07-08T21:28:31.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
+  - 开发规范
 ---
 
 ```bash

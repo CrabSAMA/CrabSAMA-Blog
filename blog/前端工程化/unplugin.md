@@ -1,9 +1,13 @@
 ---
 title: 聊聊unplugin
-date: 2022-08-3 10:38:40 +8
-lastUpdated: true
-categories:
+date: 2022-08-03 10:38:40 +8
+category:
   - 前端工程化
+tag:
+  - 前端工程化
+  - rollup
+  - vite
+  - webpack
 ---
 
 > 先上一个 github 地址 https://github.com/unjs/unplugin

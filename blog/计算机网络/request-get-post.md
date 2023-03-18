@@ -1,9 +1,10 @@
 ---
 title: Get 和 Post 请求的区别
 date: 2022-05-27 18:48:34 +8
-lastUpdated: true
-categories:
+category:
   - 计算机网络
+tag:
+  - HTTP
 ---
 
 ## Get 请求和 Post 请求的区别
@@ -23,4 +24,3 @@ categories:
 - `get` 请求产生一个 `tcp` 数据包，`post` 请求产生两个 `tcp` 数据包
 
   浏览器在发送 `get` 请求时会将 `header` 和 `data` 一起发送给服务器，服务器返回 `200` 状态码；而在发送 `post` 请求时，会先将 `header` 发送给服务器，服务器返回 `100`，之后再将 `data` 发送给服务器，服务器返回 `200 OK`。
-

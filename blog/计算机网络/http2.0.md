@@ -1,14 +1,15 @@
 ---
 title: HTTP 2.0
 date: 2022-05-27 18:00:41 +8
-lastUpdated: true
-categories:
+category:
   - 计算机网络
+tag:
+  - HTTP
 ---
 
 `HTTP 2.0` 的出现，相比于 `HTTP 1.x` ，大幅度的提升了 `web` 性能。在与 HTTP/1.1 完全语义兼容的基础上，进一步减少了网络延迟。
 
-`Firefox` 和 `Chrome` 早已宣布不支持任何不经过 `TLS` 加密的 `HTTP/2` 协议。 
+`Firefox` 和 `Chrome` 早已宣布不支持任何不经过 `TLS` 加密的 `HTTP/2` 协议。
 
 ## 多路复用
 

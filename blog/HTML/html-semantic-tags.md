@@ -1,9 +1,10 @@
 ---
 title: HTML语义化标签
 date: 2020-10-15T14:43:01.0000000+08:00
-lastUpdated: true
-categories:
- - HTTP
+category:
+  - 前端开发
+tag:
+  - HTML
 ---
 
 语义是指对一个词或者句子含义的正确解释。很多 `html` 标签也具有语义的意义，，也就是说元素本身传达了关于标签所包含内容类型的一些东西。

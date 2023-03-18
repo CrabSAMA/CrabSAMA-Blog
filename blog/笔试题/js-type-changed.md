@@ -1,9 +1,9 @@
 ---
 title: js类型转换
-lastUpdated: true
-sidebar: 'auto'
 category:
+  - 前端开发
   - 笔试题
+tag:
   - JavaScript
 ---
 

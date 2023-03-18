@@ -1,9 +1,12 @@
 ---
 title: 浏览器的缓存机制
 date: 2020-08-10T10:49:39.0000000+08:00
-lastUpdated: true
-categories:
- - HTTP
+category:
+  - 浏览器
+tag:
+  - 浏览器
+  - 缓存
+  - 性能优化
 ---
 
 [简书文章链接](https://www.jianshu.com/p/54cc04190252)

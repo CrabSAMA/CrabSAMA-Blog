@@ -1,9 +1,12 @@
 ---
 title: Composition API 编程思想
 date: 2023-02-07 14:46:40 +8
-lastUpdated: true
-categories:
+category:
+  - 前端开发
   - 前端工程化
+tag:
+  - 前端工程化
+  - Vue
 ---
 
 > 组合式 API (Composition API) 是一系列 API 的集合，使我们可以使用函数而不是声明选项的方式书写 Vue 组件。

@@ -1,8 +1,9 @@
 ---
 title: Prototype
-sidebar: 'auto'
-categories:
- - JavaScript
+category:
+  - 前端开发
+tag:
+  - JavaScript
 ---
 > 帮你彻底搞懂JS中的PROTOTYPE、\_\_PROTO\_\_与CONSTRUCTOR（图解）
 > 

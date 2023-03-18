@@ -1,9 +1,10 @@
 ---
 title: URL
 date: 2020-07-09T15:01:49.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
 ---
 
 **官方文档：**<http://nodejs.cn/api/url.html>

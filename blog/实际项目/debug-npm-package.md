@@ -1,10 +1,12 @@
 ---
 title: 调试 node_module 中的包
 date: 2022-05-27 17:05:36 +8
-lastUpdated: true
-categories:
- - 实际项目
- - 经验
+category:
+  - 实际项目
+  - 经验
+  - 前端开发
+tag:
+  - node.js
 ---
 
 ## 前提场景

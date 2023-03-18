@@ -1,9 +1,10 @@
 ---
 title: HTML5对浏览器的支持
 date: 2018-12-13T10:59:58.0000000+08:00
-lastUpdated: true
-categories:
- - HTTP
+category:
+  - 前端开发
+tag:
+  - HTML
 ---
 
 ## **Internet Explorer 的问题**

@@ -1,9 +1,10 @@
 ---
 title: 操作HTTP请求和响应的常见问题
 date: 2020-07-09T15:53:34.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
 ---
 
 -   问： 为什么通过`headers`对象访问到的`HTTP`请求头或响应头字段不是驼峰的？

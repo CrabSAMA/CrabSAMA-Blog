@@ -1,9 +1,11 @@
 ---
 title: 比较下内部埋点 SDK 与字节前端监控 SDK
 date: 2022-08-17 14:40:40 +8
-lastUpdated: true
-categories:
+category:
   - 实际项目
+  - 前端开发
+tag:
+  - 埋点
 ---
 
 > 惯例先上链接——[字节的前端监控 SDK 是怎样设计的](https://mp.weixin.qq.com/s/-eEMSn2WpDiMbNSBgY3-pg)

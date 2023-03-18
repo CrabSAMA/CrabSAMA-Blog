@@ -1,8 +1,9 @@
 ---
 title: Set和Get
-sidebar: 'auto'
-categories:
- - JavaScript
+category:
+  - 前端开发
+tag:
+  - JavaScript
 ---
 
 对象的 `set get` 是es5的中对象的特性，使用示例：

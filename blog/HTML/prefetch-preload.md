@@ -1,9 +1,11 @@
 ---
 title: prefetch和preload
 date: 2020-08-13T11:33:02.0000000+08:00
-lastUpdated: true
-categories:
- - HTTP
+category:
+  - 前端开发
+tag:
+  - HTML
+  - 性能优化
 ---
 
 [牛客真题](https://www.nowcoder.com/test/question/done?tid=35895019&qid=643152#summary)

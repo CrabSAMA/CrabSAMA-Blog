@@ -1,8 +1,12 @@
 ---
 title: Vue首屏加载优化项目实践
-sidebar: 'auto'
-categories:
- - 实际项目
+date: 2021-12-17 14:40:40 +8
+category:
+  - 实际项目
+  - 前端开发
+tag:
+  - vue
+  - 性能优化
 ---
 > 提升90%加载速度——vuecli下的首屏性能优化
 > 

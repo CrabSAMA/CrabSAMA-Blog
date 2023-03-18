@@ -1,9 +1,12 @@
 ---
 title: webpack规则探索
 date: 2023-03-17 17:57:52+08:00
-lastUpdated: true
-categories:
-  - Webpack
+category:
+  - webpack
+  - 前端工程化
+tag:
+  - webpack
+  - 前端工程化
 ---
 
 ## 背景

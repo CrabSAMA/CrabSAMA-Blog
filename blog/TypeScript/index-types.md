@@ -1,9 +1,9 @@
 ---
 title: 索引类型
-sidebar: 'auto'
-categories:
- - TypeScript
-
+category:
+  - TypeScript
+tag:
+  - TypeScript
 ---
 
 > TypeScript 高级类型[官方文档](https://www.tslang.cn/docs/handbook/advanced-types.html)

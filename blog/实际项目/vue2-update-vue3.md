@@ -1,8 +1,12 @@
 ---
 title: Vue2 项目迁移 Vue3
-sidebar: 'auto'
-categories:
- - 实际项目
+date: 2022-08-04 15:52:40 +8
+category:
+  - 实际项目
+  - 经验
+  - 前端开发
+tag:
+  - vue
 ---
 ## vite + vue3 + typescript
 

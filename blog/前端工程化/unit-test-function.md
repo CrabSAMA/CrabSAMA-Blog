@@ -1,8 +1,11 @@
 ---
 title: 公用方法单元测试
-sidebar: 'auto'
-categories:
- - 前端工程化
+date: 2020-12-22 17:06:00 +8
+category:
+  - 前端开发
+  - 前端工程化
+tag:
+  - 前端工程化
 ---
 
 ## 使用场景

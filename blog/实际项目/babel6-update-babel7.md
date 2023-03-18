@@ -1,9 +1,11 @@
 ---
 title: babel6升级到babel7
-sidebar: 'auto'
-categories:
- - 实际项目
-
+date: 2020-12-29 14:58:51 +8
+category:
+  - 实际项目
+  - 前端开发
+tag:
+  - babel
 ---
 
 ## Babel 7 库的作用域 (scope)

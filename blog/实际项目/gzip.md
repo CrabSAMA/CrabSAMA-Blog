@@ -1,9 +1,11 @@
 ---
 title: 开启 gzip
 date: 2022-05-27 17:22:57 +8
-lastUpdated: true
-categories:
- - 实际项目
+category:
+  - 实际项目
+  - 前端开发
+tag:
+  - HTTP
 ---
 
 有两种 gzip 压缩的方式：

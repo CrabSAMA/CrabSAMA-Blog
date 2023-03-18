@@ -1,9 +1,10 @@
 ---
 title: 使用 nginx 实现反向代理
 date: 2022-05-27 17:12:22 +8
-lastUpdated: true
-categories:
- - 实际项目
+category:
+  - 实际项目
+tag:
+  - nginx
 ---
 
 ## 背景

@@ -1,9 +1,10 @@
 ---
 title: 文本编码
 date: 2020-07-09T10:15:04.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
 ---
 
 使用`NodeJS`编写前端工具时，操作得最多的是文本文件，因此也就涉及到了文件编码的处理问题。我们常用的文本编码有`UTF8`和`GBK`两种，并且`UTF8`文件还可能带有`BOM`。在读取不同编码的文本文件时，需要将文件内容转换为`JS`使用的`UTF8`编码字符串后才能正常处理。

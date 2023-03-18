@@ -1,9 +1,10 @@
 ---
 title: Stream数据流
 date: 2020-07-09T09:21:04.0000000+08:00
-lastUpdated: true
-categories:
- - Node.js
+category:
+  - node.js
+tag:
+  - node.js
 ---
 
 **官方文档：**<http://nodejs.org/api/stream.html>

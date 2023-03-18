@@ -1,9 +1,10 @@
 ---
 title: HTTPS
 date: 2022-05-27 17:56:27 +8
-lastUpdated: true
-categories:
+category:
   - 计算机网络
+tag:
+  - HTTP
 ---
 
 ## `HTTP` VS `HTTPS`

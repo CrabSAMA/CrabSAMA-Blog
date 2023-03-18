@@ -1,8 +1,11 @@
 ---
 title: 探索 babel
 date: 2023-03-17 17:55:51 +8
-lastUpdated: true
-categories:
+category:
+  - 前端开发
+  - 前端工程化
+tag:
+  - babel
   - 前端工程化
 ---
 

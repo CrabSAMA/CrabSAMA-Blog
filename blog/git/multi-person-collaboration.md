@@ -1,11 +1,11 @@
 ---
 title: 多人协作
 date: 2020-06-09T21:59:19.0000000+08:00
-lastUpdated: true
-categories:
- - git
- - 实际项目
- - 经验
+category:
+  - 实际项目
+  - 经验
+tag:
+  - git
 ---
 
 多人协作的工作模式通常是这样：
