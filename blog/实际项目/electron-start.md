@@ -102,6 +102,7 @@ interface electronAPI {
   getFrontMatter: (markdownPath: string) => Promise<matter.GrayMatterFile<string>>
 }
 
+
 interface Window {
   electronAPI: electronAPI;
 }
