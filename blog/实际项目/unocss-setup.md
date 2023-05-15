@@ -45,7 +45,7 @@ vscode 插件：[UnoCSS](https://marketplace.visualstudio.com/items?itemName=ant
 
 3. 写 class 属性时，输入前几个字母，如果有弹出如下图，则证明语法提示正常。
 
-   ![image-20230515162203446](img/image-20230515162203446.png)
+   ![image-20230515162203446](./img/image-20230515162203446.png)
 
    同时，vscode 输出栏内 Unocss 会打印出如下内容：
 
