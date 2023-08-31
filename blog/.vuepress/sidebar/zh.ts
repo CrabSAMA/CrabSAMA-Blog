@@ -13,6 +13,7 @@ const folderList = [
   'Node.js',
   'TypeScript',
   'Webpack',
+  '音视频'
 ]
 
 const genSidebarConfig = () => {
