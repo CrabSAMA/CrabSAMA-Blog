@@ -1,5 +1,5 @@
-import { searchPlugin } from '@vuepress/plugin-search';
 import { defineUserConfig } from "vuepress";
+import { viteBundler } from '@vuepress/bundler-vite'
 import theme from "./theme";
 
 export default defineUserConfig({
@@ -11,9 +11,10 @@ export default defineUserConfig({
 
   theme,
 
-  plugins: [
-    searchPlugin()
-  ]
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
 
   // Enable it with pwa
   // shouldPrefetch: false,

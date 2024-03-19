@@ -70,25 +70,25 @@ export default hopeTheme({
     mdEnhance: {
       align: true,
       attrs: true,
-      chart: true,
+      // chart: true,
       codetabs: true,
       demo: true,
-      echarts: true,
+      // echarts: true,
       figure: true,
-      flowchart: true,
+      // flowchart: true,
       gfm: true,
       imgLazyload: true,
       imgSize: true,
       include: true,
-      katex: true,
+      // katex: true,
       mark: true,
-      mermaid: true,
+      // mermaid: true,
       playground: {
         presets: ["ts", "vue"],
       },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
+      // presentation: {
+      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+      // },
       stylize: [
         {
           matcher: "Recommended",
@@ -106,8 +106,10 @@ export default hopeTheme({
       sup: true,
       tabs: true,
       vPre: true,
-      vuePlayground: true,
+      // vuePlayground: true,
     },
+
+    search: true
 
     // uncomment these if you want a PWA
     // pwa: {
