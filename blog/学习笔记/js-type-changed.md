@@ -1,10 +1,10 @@
 ---
 title: js类型转换
 category:
-  - 前端开发
-  - 笔试题
+  - 学习笔记
 tag:
   - JavaScript
+  - 笔面试
 ---
 
 ```javascript
