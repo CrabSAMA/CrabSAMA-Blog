@@ -1,6 +1,6 @@
 ---
 title: 比较 electron 和 tauri
-date: 2023-03-20 10:22:37
+date: 2023-03-20 10:22:37 +08:00
 category:
   - 日志随笔
 tag:

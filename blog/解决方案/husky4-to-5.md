@@ -1,6 +1,6 @@
 ---
 title: Git Hook 插件——husky4.x升级到5.+指南
-date: 2022-08-04 15:37:51
+date: 2022-08-04 15:37:51 +08:00
 category:
   - 解决方案
 tag:

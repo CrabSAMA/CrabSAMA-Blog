@@ -1,6 +1,6 @@
 ---
 title: JavaScript 代码规范
-date: 2021-11-03 17:58:40
+date: 2021-11-03 17:58:40 +08:00
 category:
   - 开发规范
 tag:

@@ -1,6 +1,6 @@
 ---
 title: babel6升级到babel7
-date: 2020-12-29 14:58:51
+date: 2020-12-29 14:58:51 +08:00
 category:
   - 解决方案
 tag:

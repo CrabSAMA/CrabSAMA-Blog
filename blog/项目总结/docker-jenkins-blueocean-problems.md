@@ -1,6 +1,6 @@
 ---
 title: docker 方式部署的 jenkins 使用 blueocean 方式持续部署并打包回传宿主机遇到的坑一览
-date: 2022-05-10 19:30:32
+date: 2022-05-10 19:30:32 +08:00
 category:
   - 项目总结
 tag:

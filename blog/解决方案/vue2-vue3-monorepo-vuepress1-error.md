@@ -1,6 +1,6 @@
 ---
 title: Vue2/Vue3共存Monorepo组件库引入VuePress报错
-date: 2023-11-10 11:19:20
+date: 2023-11-10 11:19:20 +08:00
 category:
   - 解决方案
 tag:

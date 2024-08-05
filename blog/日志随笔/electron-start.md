@@ -1,6 +1,6 @@
 ---
 title: electron 初体验
-date: 2023-03-20 10:49:55
+date: 2023-03-20 10:49:55 +08:00
 category:
   - 日志随笔
 tag:
