@@ -1,10 +1,8 @@
 ---
 title: JavaScript 代码规范
-date: 2021-11-03 17:58:40 +8
+date: 2021-11-03 17:58:40
 category:
-  - 前端开发
-  - JavaScript
-  - 前端工程化
+  - 开发规范
 tag:
   - 开发规范
   - 前端工程化

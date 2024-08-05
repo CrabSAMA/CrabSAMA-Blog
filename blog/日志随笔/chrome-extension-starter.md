@@ -1,17 +1,15 @@
 ---
 title: 来写一个 chrome extension
-date: 2022-08-12 17:58:40 +8
+date: 2022-08-12 17:58:40
 category:
-  - 实际项目
-  - 经验
-  - 前端开发
+  - 日志随笔
 tag:
   - 扩展程序
 ---
 
 > 照惯例，先上篇参考文章：
 >
-> [关于chrome拓展开发的实践与思考(一) - 掘金 (juejin.cn)](https://juejin.cn/post/7115201075803586574)
+> [关于 chrome 拓展开发的实践与思考(一) - 掘金 (juejin.cn)](https://juejin.cn/post/7115201075803586574)
 >
 > 这是一个作者写的系列文章，帮助了我很多，在此感谢~
 
@@ -56,11 +54,11 @@ tag:
 └── styles
 ```
 
-**tips:** 更改 `popup.html` 和其引入的 `js` 代码后无需重新打包，只需要点击右上角插件icon再次开启关闭即可。（其他文件会有例外哦）
+**tips:** 更改 `popup.html` 和其引入的 `js` 代码后无需重新打包，只需要点击右上角插件 icon 再次开启关闭即可。（其他文件会有例外哦）
 
 ## 进阶
 
-因为我的技术栈是 `Vue` ，很自然地我就想用 `Vue` 来写这个应用。那接下来我要引入 `Vue` 和 `ant-design-vue`，这里面有两种方法：一种就是像平时一样，通过 `webpack` 或者 `vite` 将应用打包，另一种就是直接编写原生 `js` 代码，通过 `CDN`  直接引入对应的文件。这里因为是刚起步，选择了较为简单的 `CDN`  引入。虽然是说简单，但是这其中也遇到了不少坑，这里我们来记录一下。
+因为我的技术栈是 `Vue` ，很自然地我就想用 `Vue` 来写这个应用。那接下来我要引入 `Vue` 和 `ant-design-vue`，这里面有两种方法：一种就是像平时一样，通过 `webpack` 或者 `vite` 将应用打包，另一种就是直接编写原生 `js` 代码，通过 `CDN` 直接引入对应的文件。这里因为是刚起步，选择了较为简单的 `CDN` 引入。虽然是说简单，但是这其中也遇到了不少坑，这里我们来记录一下。
 
 ### 不支持行内 `script`
 
@@ -82,7 +80,7 @@ tag:
 
 在 `Vue` 中声明了一些 `data` 并通过操作使数据变更了，但是拓展一开一关，哎发现数据没掉了，证明其实每次打开和关闭都等于销毁了整个 `html`，那很自然地我们会想到要将数据持久化，这样就涉及到下面的两个概念了：
 
-**生命周期：** 拓展弹出的界面的完整周期只有它展示在界面的那段时间(有点废话)，也就是说，拓展在关闭重新打开后，它的函数也跟着重新刷新，页面也重新渲染，这也就是重新打开后数字变回了0以及控制台自动消失的原因，对于这点你也可以类比我们的`chrome`浏览器。当浏览器关闭时，控制台也会随之消失。那有没有即使插件关闭了，数据不丢失的方法？有的，`background.js`。
+**生命周期：** 拓展弹出的界面的完整周期只有它展示在界面的那段时间(有点废话)，也就是说，拓展在关闭重新打开后，它的函数也跟着重新刷新，页面也重新渲染，这也就是重新打开后数字变回了 0 以及控制台自动消失的原因，对于这点你也可以类比我们的`chrome`浏览器。当浏览器关闭时，控制台也会随之消失。那有没有即使插件关闭了，数据不丢失的方法？有的，`background.js`。
 
 **`background.js`:** 你可以理解为会一直常驻的后台`JS`或后台页面，它的生命周期与拓展的`default_popup`（即拓展弹出页面）不同，只有当**浏览器彻底关闭**时，它的生命周期才会结束，我们可以利用该特性完成我们的需求。
 
@@ -141,7 +139,7 @@ mounted() {
 
   `background` -> `popup`：一般比较少这种情况，因此本文先省略。
 
-  > **tips**:注意，V3版本中`getBackgroundPage`方法不再适用，笔者在尝试中发现返回了`undefined`。相互通信建议使用`chrome.runtime.sendMessage` & `chrome.runtime.sendMessage`。笔者因为一直使用V2版本，结果今天尝试使用V3实践时遇到了很多坑点，且V2版本在2023年即将弃用，建议多看看官方文档。
+  > **tips**:注意，V3 版本中`getBackgroundPage`方法不再适用，笔者在尝试中发现返回了`undefined`。相互通信建议使用`chrome.runtime.sendMessage` & `chrome.runtime.sendMessage`。笔者因为一直使用 V2 版本，结果今天尝试使用 V3 实践时遇到了很多坑点，且 V2 版本在 2023 年即将弃用，建议多看看官方文档。
 
 - `popup` 与 `content`
 
@@ -164,7 +162,11 @@ mounted() {
   ```js
   // content.js
   // 注册一个 listener 来接受消息
-  chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  chrome.runtime.onMessage.addListener(function (
+    request,
+    sender,
+    sendResponse
+  ) {
     if (request === 'getData') {
       console.log(request, sender) //request即为收到的消息，sender为发送源所在的页面，
       // 这下面就是心心念念的 DOM 操作啦
@@ -212,16 +214,13 @@ mounted() {
 
 ```js
 // 这里的对象是筛选条件，具体可以参考谷歌官方的 api 文档
-chrome.cookies.getAll(
-  { name: '_hll_identifier_stg' },
-  function (cookie) {
-    // 这里拿到的 cookie 是一个数组，因为我调的是 getAll
-    const found = cookie.find((val) => {
-      return val.domain.indexOf('.domain.com') > -1
-    })
-    const uacCookie = found.value
-  }
-)
+chrome.cookies.getAll({ name: '_hll_identifier_stg' }, function (cookie) {
+  // 这里拿到的 cookie 是一个数组，因为我调的是 getAll
+  const found = cookie.find((val) => {
+    return val.domain.indexOf('.domain.com') > -1
+  })
+  const uacCookie = found.value
+})
 ```
 
 这里可以提醒一下，`chrome` 提供的这些 `api` 基本都是通过回调的方式拿到结果的，默认的 `this` 指向不是 `Vue` 实例本身，因此在回调函数中如果想要获取 `Vue` 的 `this`，需要先在外层拿到并存起来，再在回调函数使用哟。

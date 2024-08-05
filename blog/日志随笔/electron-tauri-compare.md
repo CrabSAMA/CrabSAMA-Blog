@@ -2,7 +2,7 @@
 title: 比较 electron 和 tauri
 date: 2023-03-20 10:22:37
 category:
-  - 实际项目
+  - 日志随笔
 tag:
   - electron
   - tauri

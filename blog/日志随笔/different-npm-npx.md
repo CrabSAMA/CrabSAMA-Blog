@@ -1,8 +1,8 @@
 ---
 title: npm 和 npx 的区别
-date: 2020-12-14T09:42:21.0000000+08:00
+date: 2020-12-14 09:42:21
 category:
-  - node.js
+  - 日志随笔
 tag:
   - node.js
 ---

@@ -1,9 +1,8 @@
 ---
 title: Composition API 编程思想
-date: 2023-02-07 14:46:40 +8
+date: 2023-02-07 14:46:40
 category:
-  - 前端开发
-  - 前端工程化
+  - 学习笔记
 tag:
   - 前端工程化
   - Vue

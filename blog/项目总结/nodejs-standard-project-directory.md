@@ -1,8 +1,8 @@
 ---
 title: Node.js标准的工程目录
-date: 2020-07-08T21:28:31.0000000+08:00
+date: 2020-07-08 21:28:31
 category:
-  - node.js
+  - 项目总结
 tag:
   - node.js
   - 开发规范

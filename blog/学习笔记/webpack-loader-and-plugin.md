@@ -1,9 +1,8 @@
 ---
 title: Webpack Loader 与 Plugin
-date: 2022-06-27 16:43:39+08:00
+date: 2022-06-27 16:43:39
 category:
-  - webpack
-  - 前端工程化
+  - 学习笔记
 tag:
   - webpack
   - 前端工程化

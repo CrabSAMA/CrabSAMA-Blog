@@ -1,7 +1,7 @@
 ---
 title: DOM操作
 category:
-  - 前端开发
+  - 学习笔记
 tag:
   - JavaScript
   - 浏览器

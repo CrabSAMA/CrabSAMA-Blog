@@ -1,7 +1,7 @@
 ---
 title: Proxy
 category:
-  - 前端开发
+  - 学习笔记
 tag:
   - JavaScript
 ---

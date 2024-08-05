@@ -1,9 +1,8 @@
 ---
 title: webpack规则探索
-date: 2023-03-17 17:57:52+08:00
+date: 2023-03-17 17:57:52
 category:
-  - webpack
-  - 前端工程化
+  - 学习笔记
 tag:
   - webpack
   - 前端工程化

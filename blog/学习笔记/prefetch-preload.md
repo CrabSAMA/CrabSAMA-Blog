@@ -1,8 +1,8 @@
 ---
 title: prefetch和preload
-date: 2020-08-13T11:33:02.0000000+08:00
+date: 2020-08-13 11:33:02
 category:
-  - 前端开发
+  - 学习笔记
 tag:
   - HTML
   - 性能优化

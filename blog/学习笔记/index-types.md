@@ -1,7 +1,7 @@
 ---
 title: 索引类型
 category:
-  - TypeScript
+  - 学习笔记
 tag:
   - TypeScript
 ---

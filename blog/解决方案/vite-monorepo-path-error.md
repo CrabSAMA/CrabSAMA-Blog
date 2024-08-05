@@ -1,10 +1,8 @@
 ---
 title: Vite 引入 monorepo 文件找不到路径
-date: 2023-9-19 15:36:11 +8
+date: 2023-09-19 15:36:11
 category:
-  - 实际项目
-  - 经验
-  - 前端开发
+  - 解决方案
 tag:
   - monorepo
   - 组件库

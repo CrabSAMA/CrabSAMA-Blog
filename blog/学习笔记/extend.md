@@ -1,7 +1,7 @@
 ---
 title: JavaScript语言精粹：继承
 category:
-  - 前端开发
+  - 学习笔记
 tag:
   - JavaScript
 ---

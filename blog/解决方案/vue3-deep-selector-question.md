@@ -1,9 +1,8 @@
 ---
-title: Vue3 中 :deep() 选择器的坑
-date: 2022-11-29 18:09:00 +8
+title: 'Vue3 中 :deep() 选择器的坑'
+date: 2022-11-29 18:09:00
 category:
-  - 实际项目
-  - 前端开发
+  - 解决方案
 tag:
   - Vue
   - css

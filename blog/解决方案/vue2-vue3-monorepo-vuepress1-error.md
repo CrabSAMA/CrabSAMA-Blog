@@ -1,10 +1,8 @@
 ---
 title: Vue2/Vue3共存Monorepo组件库引入VuePress报错
-date: 2023-11-10 11:19:20 +8
+date: 2023-11-10 11:19:20
 category:
-  - 实际项目
-  - 经验
-  - 前端开发
+  - 解决方案
 tag:
   - monorepo
   - 组件库

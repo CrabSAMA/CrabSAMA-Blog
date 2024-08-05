@@ -2,7 +2,7 @@
 title: webpack 升级踩坑
 date: 2023-03-31 15:23:12
 category:
-  - 实际项目
+  - 解决方案
 tag:
   - webpack
 ---
@@ -38,4 +38,4 @@ TypeError: Cannot read properties of undefined (reading 'styles')
 
 问题是在 devServer 环境样式丢失，也没有报错，只是样式没有写入到 inline 中。
 
-因为在 dev 环境中，样式是由 `vue-style-loader` 处理的，这个包是依赖 `style-loader`  的，查看项目中依赖版本，发现 `style-loader` 版本过低，在升级 webpack 时，需要将许多 loader 和 plugin 统一进行配套升级，很坑的点是在遇到此类不匹配的情况时，有时并不会报错，所以排查成本很高，只能去和旧版本对比，这就是经验之谈。
+因为在 dev 环境中，样式是由 `vue-style-loader` 处理的，这个包是依赖 `style-loader` 的，查看项目中依赖版本，发现 `style-loader` 版本过低，在升级 webpack 时，需要将许多 loader 和 plugin 统一进行配套升级，很坑的点是在遇到此类不匹配的情况时，有时并不会报错，所以排查成本很高，只能去和旧版本对比，这就是经验之谈。

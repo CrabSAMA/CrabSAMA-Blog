@@ -1,8 +1,8 @@
 ---
 title: unocss 接入踩坑
-date: 2023-05-11 17:36:31 +8
+date: 2023-05-11 17:36:31
 category:
-  - 实际项目
+  - 解决方案
 tag:
   - unocss
 ---
