@@ -1,8 +1,9 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
-  "/",
-  { text: "文章列表", icon: "article", link: "/article/" },
-  { text: "分类", icon: "categoryselected", link: "/category/" },
-  { text: "标签", icon: "tag", link: "/tag/" },
+  { text: "主页", icon: "tabler:home", link: "/" },
+  { text: "文章列表", icon: "ri:article-line", link: "/article/" },
+  { text: "分类", icon: "tabler:category", link: "/category/" },
+  { text: "标签", icon: "mdi:tag-outline", link: "/tag/" },
+  { text: "时间轴", icon: "gravity-ui:list-timeline", link: "/timeline/" },
 ]);

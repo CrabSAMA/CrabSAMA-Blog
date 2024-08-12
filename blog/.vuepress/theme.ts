@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { zhNavbar } from "./navbar/index.js";
+import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://crabsama.github.io/CrabSAMA-Blog",
@@ -12,7 +12,7 @@ export default hopeTheme({
     url: "https://crabsama.github.io/CrabSAMA-Blog",
   },
 
-  iconAssets: "iconfont",
+  iconAssets: "iconify",
 
   logo: "/assets/img/logo.png",
 
