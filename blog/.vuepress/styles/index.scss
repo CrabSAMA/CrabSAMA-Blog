@@ -6,3 +6,21 @@ html[data-theme="light"] {
       }
     }
 }
+
+// 针对自己时间轴的页面样式做处理
+.myself-container {
+  .vp-breadcrumb {
+    display: none;
+  }
+  .vp-page-title {
+    display: none;
+  }
+  .theme-hope-content {
+    @media (min-width: 1280px) {
+      --content-width: 1140px;
+    }
+    @media (min-width: 1440px) {
+      --content-width: 1320px;
+    }
+  }
+}
