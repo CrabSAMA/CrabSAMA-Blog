@@ -6,5 +6,5 @@ export const zhNavbar = navbar([
   { text: "分类", icon: "tabler:category", link: "/category/" },
   { text: "标签", icon: "mdi:tag-outline", link: "/tag/" },
   { text: "时间轴", icon: "ic:twotone-timeline", link: "/timeline/" },
-  { text: "经历", icon: "gravity-ui:list-timeline", link: "/myself/" },
+  { text: "历程", icon: "gravity-ui:list-timeline", link: "/myself/" },
 ]);
