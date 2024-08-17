@@ -6,6 +6,7 @@ category:
 tag:
   - HTML
   - 性能优化
+  - 面试题
 ---
 
 [牛客真题](https://www.nowcoder.com/test/question/done?tid=35895019&qid=643152#summary)

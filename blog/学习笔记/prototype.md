@@ -4,6 +4,7 @@ category:
   - 学习笔记
 tag:
   - JavaScript
+  - 面试题
 ---
 > 帮你彻底搞懂JS中的PROTOTYPE、\_\_PROTO\_\_与CONSTRUCTOR（图解）
 > 

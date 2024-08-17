@@ -4,7 +4,7 @@ category:
   - 学习笔记
 tag:
   - JavaScript
-  - 笔面试
+  - 面试题
 ---
 
 ```html

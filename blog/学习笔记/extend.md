@@ -4,6 +4,7 @@ category:
   - 学习笔记
 tag:
   - JavaScript
+  - 读书笔记
 ---
 
 两种实现方式：
