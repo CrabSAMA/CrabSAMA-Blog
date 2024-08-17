@@ -7,6 +7,7 @@ contributors: false
 breadcrumb: false
 lastUpdated: false
 photoswipe: false
+toc: false
 containerClass: myself-container
 ---
 
