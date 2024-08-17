@@ -6,6 +6,8 @@ category:
 tag:
   - monorepo
   - 组件库
+  - Vue
+  - VuePress
 ---
 
 ## 背景

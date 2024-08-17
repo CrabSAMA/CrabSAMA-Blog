@@ -5,6 +5,7 @@ category:
   - 解决方案
 tag:
   - vue
+  - 踩坑
 ---
 
 ## 现象

@@ -5,6 +5,7 @@ category:
   - 解决方案
 tag:
   - node.js
+  - debug
 ---
 
 ## 前提场景

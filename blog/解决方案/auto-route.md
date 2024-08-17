@@ -6,6 +6,7 @@ category:
 tag:
   - 前端工程化
   - Vue
+  - vue-router
 ---
 
 ## 使用前请看

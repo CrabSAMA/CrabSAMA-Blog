@@ -6,6 +6,8 @@ category:
 tag:
   - monorepo
   - 组件库
+  - vite
+  - 踩坑
 ---
 
 ## 问题现象
