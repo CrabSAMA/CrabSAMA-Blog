@@ -4,7 +4,7 @@ date: 2022-08-12 17:58:40 +08:00
 category:
   - 日志随笔
 tag:
-  - 扩展程序
+  - chrome extension
 ---
 
 > 照惯例，先上篇参考文章：

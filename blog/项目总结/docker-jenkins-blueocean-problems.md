@@ -6,6 +6,7 @@ category:
 tag:
   - docker
   - jenkins
+  - 踩坑
 ---
 - `docker` 方式部署 `jenkins`，若需要使用 `blueocean` 请务必在启动容器时带上 `-v /var/run/docker.sock:/var/run/docker.sock` 命令，否则将会导致找不到 `docker` 进程。
 - 由于使用的是 `gitee`，`blueocean` 方式下需要通过 `ssh` 模式连接仓库，涉及到 `ssh` 公钥和私钥生成的问题。在 `jenkins` 中配置 `ssh` 的私钥时切记！要将私钥文件中的**所有内容**（包括开始的第一行和最后一行）复制进去。
