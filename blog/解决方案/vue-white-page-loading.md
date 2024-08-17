@@ -1,6 +1,7 @@
 ---
 title: Vue首屏加载优化项目实践
 date: 2021-12-17 14:40:40 +08:00
+star: true
 category:
   - 解决方案
 tag:

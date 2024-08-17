@@ -1,6 +1,7 @@
 ---
 title: Vue2 项目迁移 Vue3
 date: 2022-08-04 15:52:40 +08:00
+star: true
 category:
   - 解决方案
 tag:

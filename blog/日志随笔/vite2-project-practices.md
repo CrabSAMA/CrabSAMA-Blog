@@ -1,6 +1,7 @@
 ---
 title: Vite2 真实项目实践
 date: 2022-08-04 15:52:40 +08:00
+star: true
 category:
   - 日志随笔
 tag:

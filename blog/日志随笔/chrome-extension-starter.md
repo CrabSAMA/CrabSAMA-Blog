@@ -1,6 +1,7 @@
 ---
 title: 来写一个 chrome extension
 date: 2022-08-12 17:58:40 +08:00
+star: true
 category:
   - 日志随笔
 tag:
