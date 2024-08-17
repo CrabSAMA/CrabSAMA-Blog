@@ -2,18 +2,11 @@ import { sidebar } from 'vuepress-theme-hope'
 import type { SidebarOptions } from 'vuepress-theme-hope'
 
 const folderList = [
-  '笔试题',
-  '计算机网络',
+  '学习笔记',
   '开发规范',
-  '前端工程化',
-  '实际项目',
-  'git',
-  'HTML',
-  'JavaScript',
-  'Node.js',
-  'TypeScript',
-  'Webpack',
-  '音视频'
+  '日志随笔',
+  '解决方案',
+  '项目总结'
 ]
 
 const genSidebarConfig = () => {

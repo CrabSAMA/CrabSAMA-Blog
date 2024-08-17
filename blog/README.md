@@ -1,7 +1,7 @@
 ---
 home: true
 layout: BlogHome
-icon: home
+icon: tabler:home
 title: 主页
 bgImage: /assets/img/bg.svg
 heroImage: /assets/img/logo.png
