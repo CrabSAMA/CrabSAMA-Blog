@@ -8,6 +8,8 @@ breadcrumb: false
 lastUpdated: false
 photoswipe: false
 toc: false
+article: false
+timeline: false
 containerClass: myself-container
 ---
 
