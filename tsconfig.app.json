@@ -1,0 +1,24 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "blog/.vuepress/**/*",
+    "types/**/*",
+    "utils/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "blog/.vuepress/.cache",
+    "blog/.vuepress/.temp",
+    "blog/.vuepress/dist"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@theme-hope/*": [
+        "node_modules/vuepress-theme-hope/lib/client/*"
+      ]
+    }
+  }
+}

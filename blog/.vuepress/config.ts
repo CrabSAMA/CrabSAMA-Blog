@@ -1,6 +1,12 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from '@vuepress/bundler-vite'
+import { getDirname, path } from '@vuepress/utils'
+import unocss from 'unocss/vite'
 import theme from "./theme";
+import { themeColorPlugin } from './plugins/vuepress-plugin-theme-color'
+const __dirname = getDirname(import.meta.url)
+
+const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
 
 export default defineUserConfig({
   base: "/CrabSAMA-Blog/",
@@ -11,10 +17,26 @@ export default defineUserConfig({
 
   theme,
 
+  alias: {
+    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel,
+    '@theme-hope': path.resolve(
+      __dirname,
+      '../../node_modules/vuepress-theme-hope/lib/client'
+    ),
+  },
+
   bundler: viteBundler({
-    viteOptions: {},
+    viteOptions: {
+      plugins: [
+        unocss()
+      ]
+    },
     vuePluginOptions: {},
   }),
+
+  plugins: [
+    themeColorPlugin()
+  ]
 
   // Enable it with pwa
   // shouldPrefetch: false,
