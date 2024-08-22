@@ -34,20 +34,17 @@ defineProps<Props>();
 
 <style scoped>
 .card {
-  background-color: #fff;
   border-radius: calc(0.4rem * 2);
   box-shadow: 0 1px 2px 0 #0000001a;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
-.card {
-  background-color: #fff;;
-  border-radius: calc(0.4rem * 2);
-  box-shadow: 0 1px 2px 0 #0000001a;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden
+html[data-theme=light] .card {
+  background-color: #fff;
+}
+html[data-theme=dark] .card {
+  background-color: #282c34;
 }
 
 .card__body,.card__footer,.card__header {
