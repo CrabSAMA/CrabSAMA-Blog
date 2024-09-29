@@ -4,8 +4,8 @@ date: 2024-05-11 18:35:15 +08:00
 category:
   - 解决方案
 tag:
-  - vscode extension
-  - vscode snippet
+  - VSCode Extension
+  - VSCode Snippet
 ---
 
 # VSCode Extension 动态 Snippets

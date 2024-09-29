@@ -6,7 +6,7 @@ category:
 tag:
   - monorepo
   - 组件库
-  - vite
+  - Vite
   - 踩坑
 ---
 

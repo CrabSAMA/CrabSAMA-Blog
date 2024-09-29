@@ -4,7 +4,7 @@ date: 2024-09-04 17:36:46 +08:00
 category:
   - 解决方案
 tag:
-  - vscode snippet
+  - VSCode Snippet
   - Markdown
 ---
 

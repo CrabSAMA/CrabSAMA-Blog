@@ -5,7 +5,7 @@ category:
   - 解决方案
 tag:
   - Vue
-  - css
+  - CSS
 ---
 
 举个例子，我们在 `.container` 类下面有一个 `iView` 的 `poptip` 组件，按往常我们的写法，都套一层 `:deep` 比较稳妥。

@@ -4,8 +4,8 @@ date: 2023-03-20 10:22:37 +08:00
 category:
   - 日志随笔
 tag:
-  - electron
-  - tauri
+  - Electron
+  - Tauri
 ---
 
 # 比较 electron 和 tauri
@@ -22,11 +22,11 @@ Tauri 是一个框架，用于为所有主要桌面平台构建微小、极快�
 
 ## 安装包 / 打包
 
-由于 tauri 基于 rust，打包后不包含 chromium 而使用系统自带的 webview，同时会将代码文件打成二进制字节码，因此在这块 tauri 直接完全胜利，同一套代码打包出来的文件，tauri 安装程序约为 6.8MB（抄的），electron 安装程序约 200MB 以上，基本上都是30倍的差异。
+由于 tauri 基于 rust，打包后不包含 chromium 而使用系统自带的 webview，同时会将代码文件打成二进制字节码，因此在这块 tauri 直接完全胜利，同一套代码打包出来的文件，tauri 安装程序约为 6.8MB（抄的），electron 安装程序约 200MB 以上，基本上都是 30 倍的差异。
 
 ## 应用后端
 
-在 electron 中，与系统相关的后端逻辑（也就是指 fs、path等底层能力）可以直接使用 node.js 写，因为 electron 使用的就是 node.js 运行时；但在 tauri 中，它是基于 rust 编写的，虽然它提供了 `@tauri-apps/api` 暴露出去大多数 api，可以直接通过 JavaScript 调用，但实际使用下来，由于部分安全策略和其他限制，涉及到更底层的逻辑就需要使用 rust 去编写了。
+在 electron 中，与系统相关的后端逻辑（也就是指 fs、path 等底层能力）可以直接使用 node.js 写，因为 electron 使用的就是 node.js 运行时；但在 tauri 中，它是基于 rust 编写的，虽然它提供了 `@tauri-apps/api` 暴露出去大多数 api，可以直接通过 JavaScript 调用，但实际使用下来，由于部分安全策略和其他限制，涉及到更底层的逻辑就需要使用 rust 去编写了。
 
 这一块，如果你很熟悉 rust，那我觉得不是问题，但如果你更熟悉 node.js，学习 rust 和使用 electron 就任君选择了~
 
@@ -44,4 +44,4 @@ electron 上手难度会简单点，现在大多数的前端开发工程师更�
 
 ## 其他对比
 
-- 同样使用 vite + react 作为渲染层，pnpm作为包管理器的情况下，electron 需要一个 vite plugin 来支持，同时 `package.json` 中 type 不能设置为 `module`，并且由于 electron 打包的限制，我们需要将 pnpm 设置为非链接模式，这会导致 pnpm 在空间上的优势荡然无存；而 tauri 不存在上述的问题，因为它不影响渲染层的打包，后端层将直接使用 rust 进行打包。
+- 同样使用 vite + react 作为渲染层，pnpm 作为包管理器的情况下，electron 需要一个 vite plugin 来支持，同时 `package.json` 中 type 不能设置为 `module`，并且由于 electron 打包的限制，我们需要将 pnpm 设置为非链接模式，这会导致 pnpm 在空间上的优势荡然无存；而 tauri 不存在上述的问题，因为它不影响渲染层的打包，后端层将直接使用 rust 进行打包。

@@ -5,8 +5,8 @@ category:
   - 学习笔记
 tag:
   - 前端工程化
-  - rollup
-  - vite
+  - Rollup
+  - Vite
   - webpack
 ---
 

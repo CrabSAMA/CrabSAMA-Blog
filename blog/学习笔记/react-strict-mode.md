@@ -4,7 +4,7 @@ date: 2024-08-01 16:41:55 +08:00
 category:
   - 学习笔记
 tag:
-  - react
+  - React
 ---
 
 # React 严格模式

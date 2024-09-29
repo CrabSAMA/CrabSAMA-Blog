@@ -5,7 +5,7 @@ category:
   - 解决方案
 tag:
   - 前端工程化
-  - git
+  - Git
   - husky
 ---
 
@@ -15,11 +15,11 @@ tag:
 
 1. 升级`husky`版本（如果不需要可以跳过）
 
-   更改 package.json 里面的版本号为最新，然后` sudo lnpm install `即可。
+   更改 package.json 里面的版本号为最新，然后`sudo lnpm install`即可。
 
 2. 初始化新版 `husky`
 
-   新版 `husky` 需要有一个 `install` 的操作，安装新版后需要执行` husky install `命令，**刚 `clone` 下来的项目也需要进行 `install` 操作**，同理。
+   新版 `husky` 需要有一个 `install` 的操作，安装新版后需要执行`husky install`命令，**刚 `clone` 下来的项目也需要进行 `install` 操作**，同理。
 
 3. 根据之前的配置文件重新配置
 

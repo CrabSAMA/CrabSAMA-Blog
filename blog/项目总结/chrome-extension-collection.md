@@ -5,7 +5,7 @@ star: true
 category:
   - 项目总结
 tag:
-  - chrome extension
+  - Chrome Extension
 ---
 
 # chrome extension 系列

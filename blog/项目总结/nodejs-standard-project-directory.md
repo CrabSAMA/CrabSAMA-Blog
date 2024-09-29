@@ -4,7 +4,7 @@ date: 2020-07-08 21:28:31 +08:00
 category:
   - 项目总结
 tag:
-  - node.js
+  - Node.js
   - 开发规范
 ---
 
@@ -21,6 +21,3 @@ tag:
     package.json                    # 元数据文件
     README.md                       # 说明文件
 ```
-
-
-

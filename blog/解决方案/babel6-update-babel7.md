@@ -4,7 +4,7 @@ date: 2020-12-29 14:58:51 +08:00
 category:
   - 解决方案
 tag:
-  - babel
+  - Babel
 ---
 
 ## Babel 7 库的作用域 (scope)
@@ -26,7 +26,7 @@ tag:
    npm install -D @babel/core
    # 调用 babel-upgrade 这个工具将对 package.json 进行一次扫描
    # 将旧版本的 plugin 自动替换成 babel7 的作用域 plugin
-   npx babel-upgrade --write --install 
+   npx babel-upgrade --write --install
    ```
 
 2. `.babelrc`引入解析
@@ -54,5 +54,3 @@ tag:
    rm -rf node_modules
    npm install
    ```
-
-   

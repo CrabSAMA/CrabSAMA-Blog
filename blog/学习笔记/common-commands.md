@@ -4,7 +4,7 @@ date: 2020-06-09 20:34:44 +08:00
 category:
   - 学习笔记
 tag:
-  - git
+  - Git
 ---
 
 ## 创建仓库
@@ -29,14 +29,14 @@ tag:
 
 ## 回退提交
 
-`git reset [commit]`——将仓库回退到某个版本 `commit`可以是16进制版本号，也可以用HEAD代替
+`git reset [commit]`——将仓库回退到某个版本 `commit`可以是 16 进制版本号，也可以用 HEAD 代替
 `git reset [commit] [filename]`——将该文件在暂存区的修改撤销掉，重新放回工作区
 `git checkout -- [filename]`——令该文件回到最近一次 `commit` 或者 `add` 时的状态
 
 ## 标签相关
 
 `git tag`——查看所有标签
-`git tag -a [tag name] -m [description] [commit]`——新建一个标签 默认绑定在HEAD上 也可以指定一个 `commit id`（`-a` 指定标签名 `-m`指定说明文字）
+`git tag -a [tag name] -m [description] [commit]`——新建一个标签 默认绑定在 HEAD 上 也可以指定一个 `commit id`（`-a` 指定标签名 `-m`指定说明文字）
 `git tag -d [tag name]`——删除一个本地标签
 
 ## 远程仓库相关
@@ -67,7 +67,7 @@ tag:
 `git cherry-pick [commit]`——将一个特定的 `commit` 提交到当前分支（等于**复制**一个 `commit` 所做的修改到本分支）
 `cat [filename]`——查看某文件
 
-## stash暂存区相关
+## stash 暂存区相关
 
 `git stash`——将工作现场“储藏”起来
 `git stash list`——查看 stash 列表
@@ -78,15 +78,15 @@ tag:
 
 ## something else
 
-在`Git`中，用`HEAD`表示当前版本，也就是最新的提交，上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上100个版本写100个^比较容易数不过来，所以写成`HEAD~100`。
+在`Git`中，用`HEAD`表示当前版本，也就是最新的提交，上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上 100 个版本写 100 个^比较容易数不过来，所以写成`HEAD~100`。
 
-### git撤销修改
+### git 撤销修改
 
-场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- file`。
-场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD <file>`，就回到了场景1，第二步按场景1操作。
-场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考[版本回退](https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192)一节，不过前提是没有推送到远程库。
+场景 1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- file`。
+场景 2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD <file>`，就回到了场景 1，第二步按场景 1 操作。
+场景 3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考[版本回退](https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192)一节，不过前提是没有推送到远程库。
 
-### 禁用Fast forward模式
+### 禁用 Fast forward 模式
 
 通常，合并分支时，如果可能，`Git`会用`Fast forward`模式，但这种模式下，删除分支后，会丢掉分支信息。
 如果要强制禁用`Fast forward`模式，`Git`就会在`merge`时**生成一个新的`commit`**，这样，从分支历史上就可以看出分支信息。

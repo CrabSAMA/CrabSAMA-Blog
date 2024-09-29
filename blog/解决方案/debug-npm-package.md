@@ -4,7 +4,7 @@ date: 2022-05-27 17:05:36 +08:00
 category:
   - 解决方案
 tag:
-  - node.js
+  - Node.js
   - debug
 ---
 
@@ -29,4 +29,3 @@ tag:
    我们需要知道的一点是，其实我们直接 `import XXX from 'xxx'` 进来的包，本质上是指向了 `node_module` 下对应的文件夹。在每个标准的 `npm` 包中，都会有一个 `package.json` 文件，其中的 `main` 属性指向了以上述方式引入直接指向的 `js` 文件，所以其实我们 `import` 进来的就是这个 `js` 文件。
 
    因此我们可以直接杀到他家，在这个 `js` 文件中打上断点（`debugger`），在运行过程中就可以直接通过 `Dev Tool` 看到调试界面啦~（虽然这样还是要用到 `Chrome` 的 `Dev Tool`，但是在 `IDE` 中查看一些东西相对于 `Chrome` 还是更方便滴）
-

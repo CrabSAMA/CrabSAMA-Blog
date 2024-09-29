@@ -4,8 +4,8 @@ date: 2024-08-01 16:31:27 +08:00
 category:
   - 学习笔记
 tag:
-  - python
-  - javascript
+  - Python
+  - JavaScript
 ---
 
 # Python 作用域与 Javascript 对比

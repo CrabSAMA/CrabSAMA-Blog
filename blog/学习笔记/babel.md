@@ -4,7 +4,7 @@ date: 2023-03-17 17:55:51 +08:00
 category:
   - 学习笔记
 tag:
-  - babel
+  - Babel
   - 前端工程化
 ---
 

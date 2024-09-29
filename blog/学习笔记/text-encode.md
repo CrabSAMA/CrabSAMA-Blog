@@ -4,17 +4,17 @@ date: 2020-07-09 10:15:04 +08:00
 category:
   - 学习笔记
 tag:
-  - node.js
+  - Node.js
 ---
 
 使用`NodeJS`编写前端工具时，操作得最多的是文本文件，因此也就涉及到了文件编码的处理问题。我们常用的文本编码有`UTF8`和`GBK`两种，并且`UTF8`文件还可能带有`BOM`。在读取不同编码的文本文件时，需要将文件内容转换为`JS`使用的`UTF8`编码字符串后才能正常处理。
 
-## BOM的移除
+## BOM 的移除
 
 `BOM`用于标记一个文本文件使用`Unicode`编码，其本身是一个`Unicode`字符`（"\\uFEFF"）`，位于文本文件头部。在不同的`Unicode`编码下，`BOM`字符对应的二进制字节如下：
 
 | Bytes    | Encoding |
-|----------|----------|
+| -------- | -------- |
 | FE FF    | UTF16BE  |
 | FF FF    | UTF16LE  |
 | EF BB BF | UTF8     |
@@ -23,26 +23,25 @@ tag:
 
 ```js
 function readText(pathname) {
-    var bin = fs.readFileSync(pathname);
+  var bin = fs.readFileSync(pathname)
 
-    if (bin[0] === 0xEF && bin[1] === 0xBB && bin[2] === 0xBF) {
-        bin = bin.slice(3);
-    }
-    return bin.toString('utf-8');
+  if (bin[0] === 0xef && bin[1] === 0xbb && bin[2] === 0xbf) {
+    bin = bin.slice(3)
+  }
+  return bin.toString('utf-8')
 }
 ```
 
-## GBK转UTF8
+## GBK 转 UTF8
 
 `NodeJS`支持在读取文本文件时，或者在`Buffer`转换为字符串时指定文本编码，但遗憾的是，`GBK`编码不在`NodeJS`自身支持范围内。因此，一般我们借助`iconv-lite`这个三方包来转换编码。使用`NPM`下载该包后，我们可以按下边方式编写一个读取`GBK`文本文件的函数。
 
 ```js
-var iconv = require('iconv-lite');
+var iconv = require('iconv-lite')
 
 function readGBKText(pathname) {
-    var bin = fs.readFileSync(pathname);
+  var bin = fs.readFileSync(pathname)
 
-    return iconv.decode(bin, 'gbk');
+  return iconv.decode(bin, 'gbk')
 }
 ```
-

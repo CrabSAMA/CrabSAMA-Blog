@@ -5,7 +5,7 @@ star: true
 category:
   - 日志随笔
 tag:
-  - chrome extension
+  - Chrome Extension
 ---
 
 > 照惯例，先上篇参考文章：

@@ -6,11 +6,12 @@ category:
   - 日志随笔
 tag:
   - 前端工程化
-  - vite
+  - Vite
 ---
+
 > `Vite1`仅仅试用过，`Vite2`已经更新了，全新插件架构，丝滑的开发体验，和`Vue3`的完美结合。 出于对尤大的信任与新技术的追求，在做毕设的我尝试着把项目移植到 Vite2 上。
 >
-> [Vite2官方文档](https://cn.vitejs.dev/)（看了一个星期的英文文档才发现原来中文文档也更新了 T.T）
+> [Vite2 官方文档](https://cn.vitejs.dev/)（看了一个星期的英文文档才发现原来中文文档也更新了 T.T）
 
 ## 目标
 
@@ -55,7 +56,7 @@ npm run dev
 
 ![image-20210312111118287](./img/image-20210312111118287.png)
 
-<p style="text-align: center;">左：VueCli4 项目 右：Vite2 + Vue 项目</p> 
+<p style="text-align: center;">左：VueCli4 项目 右：Vite2 + Vue 项目</p>
 
 ### 迁移项目代码
 
@@ -86,7 +87,7 @@ npm run dev
     "serve": "vite",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview"
   }
 }
 ```
@@ -101,7 +102,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()]
+  plugins: [vue()],
 })
 ```
 
@@ -138,7 +139,7 @@ export default defineConfig({
    }
    ```
 
-由于我的项目并不是十分大型的项目，所以在完成上述操作后基本上已经将配置文件迁移好了。（我觉得应该也没有人会将大型项目移植到一个并不成熟的新框架上吧😹）
+由于我的项目并不是十分大型的项目，所以在完成上述操作后基本上已经将配置文件迁移好了。（我觉得应该也没有人会将大型项目移植到一个并不成熟的新框架上吧 😹）
 
 ### 调整代码
 
@@ -163,9 +164,9 @@ export default defineConfig({
 
 在修改完上述问题后，可以重启一下 `Vite` 的服务器，看看效果，一般不会出现特别大的问题。这也是 `Vite2` 做得比较好的地方，方便用户可以比较轻松地迁移~
 
-<p style="text-align: center;"><img src="./img/QQ20210312-143200-HD.gif"/></p> 
+<p style="text-align: center;"><img src="./img/QQ20210312-143200-HD.gif"/></p>
 
-来看一下运行效果，相较于 `VueCli`，确实现在是秒开，HMR也十分快！
+来看一下运行效果，相较于 `VueCli`，确实现在是秒开，HMR 也十分快！
 
 ## 踩坑点
 
@@ -191,16 +192,16 @@ export default defineConfig({
           } else if (id.includes('node_modules')) {
             return 'vendor'
           }
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 })
 ```
 
 ### HtmlTemplatePlugin 移植
 
-安装 `vite-plugin-html-template` 插件，[NPM地址](https://www.npmjs.com/package/vite-plugin-html-template)
+安装 `vite-plugin-html-template` 插件，[NPM 地址](https://www.npmjs.com/package/vite-plugin-html-template)
 
 ```typescript
 // vite.config.js
@@ -208,12 +209,11 @@ export default defineConfig({
   plugins: [
     htmlTemplate({
       data: {
-        title: '云台'
-      }
-    })
-  ]
+        title: '云台',
+      },
+    }),
+  ],
 })
-
 ```
 
 使用 EJS 语法（[文档](https://ejs.bootcss.com/#docs)）写 template 即可，在 htmlTemplate Plugin 中导出的值会自动输出到 html 文件中。
@@ -231,8 +231,8 @@ export default defineConfig({
   <body>
     <noscript>
       <strong
-        >We're sorry but <%= title %> doesn't work properly without JavaScript enabled. Please
-        enable it to continue.</strong
+        >We're sorry but <%= title %> doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
       >
     </noscript>
     <div id="app"></div>
@@ -242,7 +242,7 @@ export default defineConfig({
 
 ### 组件库按需引入（替代`babel-plugin-import`）
 
-安装 `unplugin-vue-components` 插件，[NPM地址](https://www.npmjs.com/package/unplugin-vue-components)
+安装 `unplugin-vue-components` 插件，[NPM 地址](https://www.npmjs.com/package/unplugin-vue-components)
 
 以 `ant-design-vue` 为例，配置如下：
 
@@ -253,9 +253,7 @@ import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 // your plugin installation
 Components({
-  resolvers: [
-    AntDesignVueResolver()
-  ]
+  resolvers: [AntDesignVueResolver()],
 })
 ```
 
@@ -271,9 +269,9 @@ Components({
   resolvers: [
     AntDesignVueResolver({
       // 引入 less 样式文件 而不是编译后的 css
-      importStyle: 'less'
-    })
-  ]
+      importStyle: 'less',
+    }),
+  ],
 })
 ```
 
@@ -314,7 +312,7 @@ export default components
 
 ### `require`引入静态文件
 
-在项目中时常有通过 `require` 引入静态文件（如图片、js文件等）的需求，在没有了 `node` 环境后，`require` 不能用了，`Vite` 提供了新的静态资源处理方法。（[文档](https://cn.vitejs.dev/guide/assets.html)）
+在项目中时常有通过 `require` 引入静态文件（如图片、js 文件等）的需求，在没有了 `node` 环境后，`require` 不能用了，`Vite` 提供了新的静态资源处理方法。（[文档](https://cn.vitejs.dev/guide/assets.html)）
 
 这里举一个引入 js 文件的例子，其他情况可以参考文档：
 
@@ -322,7 +320,7 @@ export default components
 // require 写法
 let MyIconFont = createFromIconfontCN({
   // scriptUrl: '//at.alicdn.com/t/font_2827954_m2dc4k98x4b.js'
-  scriptUrl: require('/public/iconfont.js')
+  scriptUrl: require('/public/iconfont.js'),
 })
 ```
 
@@ -330,7 +328,7 @@ let MyIconFont = createFromIconfontCN({
 // Vite import 写法
 import iconfontJs from '@/assets/iconfont.js?url'
 let MyIconFont = createFromIconfontCN({
-  scriptUrl: iconfontJs
+  scriptUrl: iconfontJs,
 })
 ```
 
@@ -338,7 +336,7 @@ let MyIconFont = createFromIconfontCN({
 
 虽然感觉不是 `Vite` 的问题，但是 `Webpack` 下正常，`Vite` 中 `tailwindcss` 样式优先级就低于组件库的样式了，权当是 `Vite` 中的一个坑处理吧~
 
-解决方法也很简单，在**高于3.0**的 `tailwindcss` 中，在 `tailwindcss.config.js` 文件中新增一个 `important: '#app'` 即可。具体内部实现就是 `tailwindcss` 在生成 css 时，每一个属性前面添加了一个 `#app` 选择器，又因为 id 选择器的高优先级，使得 `tailwindcss` 的样式拥有了较高的优先级。（[文档](https://tailwindcss.com/docs/configuration#important)）
+解决方法也很简单，在**高于 3.0**的 `tailwindcss` 中，在 `tailwindcss.config.js` 文件中新增一个 `important: '#app'` 即可。具体内部实现就是 `tailwindcss` 在生成 css 时，每一个属性前面添加了一个 `#app` 选择器，又因为 id 选择器的高优先级，使得 `tailwindcss` 的样式拥有了较高的优先级。（[文档](https://tailwindcss.com/docs/configuration#important)）
 
 ### 使用按需引入时一直报 `find new dependency`
 
@@ -350,15 +348,12 @@ import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 
 // your plugin installation
-plugins: [
-  PkgConfig(),
-  OptimizationPersist()
-]
+plugins: [PkgConfig(), OptimizationPersist()]
 ```
 
 这个插件实现的功能是在每次找到新的依赖时，将其添加到 `Vite` 配置中的 `optimizeDeps.include` 属性，以保证第二次访问时 `Vite` 不会再重新编译为 `ES Module`。
 
-> 2022年04月13日更新：
+> 2022 年 04 月 13 日更新：
 >
 > 在 `Vite` 更新到 `2.9.1` 后，上述问题解决，可以不用引入这两个插件了，作者仓库也标注归档了。
 >
@@ -401,13 +396,11 @@ module.exports = {
           if (atRule.name === 'charset') {
             atRule.remove()
           }
-        }
-      }
+        },
+      },
     },
     require('tailwindcss'),
-    require('autoprefixer')
-  ]
+    require('autoprefixer'),
+  ],
 }
-
 ```
-
