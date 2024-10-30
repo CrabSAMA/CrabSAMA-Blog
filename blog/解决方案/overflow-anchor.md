@@ -48,13 +48,13 @@ tag:
 
 在 chrome 和 safari 中运行的情况是不一样的，我们在 chrome 中运行是这样的：
 
-![chrome](.assets/anchor-chrome.gif)
+![chrome](./img/anchor-chrome.gif)
 
 可以看到，运行很正常，当我们将界面滚动到底层的时候，在容器顶部添加元素时页面**滚动位置会保持不变**，这种情况下用户体验十分良好。
 
 而在 safari 中，我们运行是这样的：
 
-![safari](.assets/anchor-safari.gif)
+![safari](./img/anchor-safari.gif)
 
 当我们滚动到容器底部，此时如果继续在容器顶部添加元素，我们会发现它**不会保留我们的滚动位置**，而是一直发生滚动位置跳动的情况，可以想象到用户在滚动完之后容器高度变化，滚动位置重新计算时会有多么崩溃，在这种情况下用户体验是不好的。
 
