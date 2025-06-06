@@ -60,7 +60,7 @@ grid-template-columns: repeat(5, 20%);
 
 在还有剩余空间的时候，`auto-fill` 会创建单元格来填充，而不会扩宽原来的单元格，而 `auto-fit` 会扩宽原来的单元格填满剩余空间。
 
-![image-20250606190520031](./.assets/image-20250606190520031.png)
+![image-20250606190520031](./img/image-20250606190520031.png)
 
 https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ 这篇文章详细对比了二者的区别。
 
