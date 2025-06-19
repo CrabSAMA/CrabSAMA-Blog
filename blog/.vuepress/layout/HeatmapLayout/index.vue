@@ -11,8 +11,8 @@
 
 <script lang="ts" setup>
 import CommonLayout from '../CommonLayout/index.vue'
-import ArticleList from '@theme-hope/modules/blog/components/ArticleList'
-import { useArticles } from '@theme-hope/modules/blog/composables/index'
+import ArticleList from '@theme-hope/components/blog/ArticleList'
+import { useArticles } from '@theme-hope/composables/blog/useArticles'
 import { usePageData } from '@vuepress/client'
 import { watch } from 'vue'
 import { computed } from 'vue'
@@ -28,7 +28,7 @@ const items = computed(() => {
   const queryYear = new Date(queryDate.value).getFullYear()
   const queryMonth = new Date(queryDate.value).getMonth()
   return articles.value.items.filter((item) => {
-    const date = new Date(item.info.d!)
+    const date = new Date(item.info.date!)
     return date.getFullYear() === queryYear && date.getMonth() === queryMonth
   })
 })

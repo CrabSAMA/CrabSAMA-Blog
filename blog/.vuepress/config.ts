@@ -18,7 +18,7 @@ export default defineUserConfig({
   theme,
 
   alias: {
-    '@theme-hope/modules/blog/components/InfoPanel': InfoPanel,
+    '@theme-hope/components/blog/InfoPanel': InfoPanel,
     '@theme-hope': path.resolve(
       __dirname,
       '../../node_modules/vuepress-theme-hope/lib/client'

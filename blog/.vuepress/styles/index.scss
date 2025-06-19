@@ -15,7 +15,7 @@ html[data-theme="light"] {
   .vp-page-title {
     display: none;
   }
-  .theme-hope-content {
+  [vp-content] {
     @media (min-width: 1280px) {
       --content-width: 1140px;
     }

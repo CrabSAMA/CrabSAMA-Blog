@@ -1,5 +1,5 @@
 <template>
-  <BlogWrapper>
+  <BlogMainLayout>
     <div class="vp-page vp-blog">
       <div class="blog-page-wrapper">
         <main class="vp-blog-main" id="main-content">
@@ -8,10 +8,10 @@
         <InfoPanel />
       </div>
     </div>
-  </BlogWrapper>
+  </BlogMainLayout>
 </template>
 
 <script lang="ts" setup>
-import BlogWrapper from '@theme-hope/modules/blog/components/BlogWrapper'
-import InfoPanel from '@theme-hope/modules/blog/components/InfoPanel'
+import BlogMainLayout from '@theme-hope/components/blog/BlogMainLayout'
+import InfoPanel from '@theme-hope/components/blog/InfoPanel'
 </script>

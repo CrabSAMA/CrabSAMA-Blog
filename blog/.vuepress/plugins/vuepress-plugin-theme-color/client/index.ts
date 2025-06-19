@@ -1,12 +1,12 @@
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { defineClientConfig } from 'vuepress/client'
 import { getThemeColor, addCssVarsToHtml } from '../../../utils/theme'
-import { useDarkmode } from '@theme-hope/modules/outlook/composables/index'
+import { useDarkMode } from '@theme-hope/index'
 import { useMutationObserver } from '@vueuse/core'
 
 export default defineClientConfig({
   setup() {
-    const { isDarkmode } = useDarkmode()
+    const { isDarkMode } = useDarkMode()
     const themeColor = ref('')
     const el = ref<HTMLHtmlElement | null>(null)
     const { stop } = useMutationObserver(
@@ -27,8 +27,8 @@ export default defineClientConfig({
       nextTick(() => {
         themeColor.value = getThemeColor()
       })
-      watch([themeColor, isDarkmode], () => {
-        addCssVarsToHtml(themeColor.value, isDarkmode.value)
+      watch([themeColor, isDarkMode], () => {
+        addCssVarsToHtml(themeColor.value, isDarkMode.value)
       })
     })
     onBeforeUnmount(() => {

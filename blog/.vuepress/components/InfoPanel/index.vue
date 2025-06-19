@@ -13,9 +13,9 @@
 </template>
 
 <script setup lang="ts">
-import BloggerInfo from '@theme-hope/modules/blog/components/BloggerInfo'
-import InfoList from '@theme-hope/modules/blog/components/InfoList'
-import '@theme-hope/modules/blog/styles/info-panel.scss'
+import BloggerInfo from '@theme-hope/components/blog/BloggerInfo'
+import InfoList from '@theme-hope/components/blog/InfoList'
+import '@theme-hope/styles/blog/info-panel.scss'
 import Heatmap from '../Heatmap/index.vue'
 </script>
 
