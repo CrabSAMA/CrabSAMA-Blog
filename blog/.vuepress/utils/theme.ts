@@ -41,7 +41,7 @@ export function getGenerateColors(color: string, isDark: boolean): string[] {
  * @returns "{ --primary-color1: '211,224,215', --primary-color2: '167,212,182' }"
  */
 export function parseCssText(cssText: string) {
-  const cssObj: Recordable<string> = {}
+  const cssObj: Record<string, string> = {}
   cssText.split(';').forEach((rule) => {
     if (rule) {
       const [key, value] = rule.split(':')
@@ -60,7 +60,7 @@ export function addCssVarsToHtml(themeColor: string, isDark: boolean) {
   const $root: HTMLElement = document.documentElement
   const cssText = $root.style.cssText
   const cssObj = parseCssText(cssText)
-  const configCssObj: Recordable<string> = {}
+  const configCssObj: Record<string, string> = {}
   const generateColors = getGenerateColors(themeColor, isDark)
   generateColors.map((color, index) => {
     const { r, g, b } = getRGBColor(color)
