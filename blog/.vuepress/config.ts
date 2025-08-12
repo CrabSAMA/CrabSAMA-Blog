@@ -11,6 +11,10 @@ const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
 export default defineUserConfig({
   base: "/CrabSAMA-Blog/",
 
+  head: [
+    ['meta', { name: 'algolia-site-verification', content: '5AD02DE471FBAEB7' }]
+  ],
+
   lang: "zh-CN",
   title: "CrabSAMA · 笔记",
   description: '记录程序狗的点点滴滴',
