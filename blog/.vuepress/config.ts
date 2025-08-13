@@ -4,6 +4,8 @@ import { getDirname, path } from '@vuepress/utils'
 import unocss from 'unocss/vite'
 import theme from "./theme";
 import { themeColorPlugin } from './plugins/vuepress-plugin-theme-color'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
+
 const __dirname = getDirname(import.meta.url)
 
 const InfoPanel = path.resolve(__dirname, './components/InfoPanel/index.vue')
@@ -39,7 +41,10 @@ export default defineUserConfig({
   }),
 
   plugins: [
-    themeColorPlugin()
+    themeColorPlugin(),
+    googleAnalyticsPlugin({
+      id: 'G-SZNSE60FQF'
+    })
   ]
 
   // Enable it with pwa
