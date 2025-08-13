@@ -65,7 +65,11 @@ export default hopeTheme(
     plugins: {
       blog: true,
 
-      search: true,
+      docsearch: {
+        appId: 'FDD1MACGXK',
+        apiKey: 'f2073fde657a025af91449a444f01bf2',
+        indexName: 'crabsama_blog_vuepress_theme_hope'
+      },
 
       icon: {
         assets: "iconify"

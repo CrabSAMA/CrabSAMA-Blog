@@ -16,6 +16,7 @@
     "@types/lodash-es": "^4.17.12",
     "@vue/tsconfig": "^0.5.1",
     "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.112",
     "@vuepress/plugin-search": "2.0.0-rc.112",
     "sass-embedded": "^1.89.2",
     "unocss": "^66.3.3",
