@@ -29,7 +29,6 @@ const text = computed(() => hasIcon.value ? props.label : props.label.slice(1));
 <style lang="scss" module>
 .icon-label-item {
   margin: .25rem;
-  background-color: #ebedf0 !important;
   color: #000;
   font-weight: bold;
   align-items: center;
