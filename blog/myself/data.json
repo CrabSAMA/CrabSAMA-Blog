@@ -1,5 +1,62 @@
 {
   "events": {
+    "2025-08-16": [
+      {
+        "title": "第一次开源社区 Contribution",
+        "description": "在参加完 Vue Conf 25 后，跟大佬们一通交流，当时又燃起了参加开源的想法，加上得到了和一位社区同学 Little Sound 的交流，了解到开源对于普通开发者来说也不是那么的遥不可及。在后面的一个开发工作中，我遇到了一些 Vite 打包的性能优化问题，我就想起来这个 devtool，想看看能不能帮上忙，结果发现其实这个项目还在 WIP，这下是真的一个好机会了。我也就在这里面找到了一些 TODO，开始尝试做贡献。第一次贡献的功能是给 devtool 添加了 plugin 视图的 flamegraph，在 8.16 这天我提交的 PR 被正式合到 main 分支上，我的第一个正式的功能贡献 PR 被合并成功啦！",
+        "labels": [
+          "Vite",
+          "GitHub"
+        ]
+      }
+    ],
+    "2025-07-12": [
+      {
+        "title": "Vue Conf 25",
+        "description": "参加了 Vue Conf 25，了解到前端行业的一些新动向，Rust 使用的工具链已经用在生产当中，有了比较大的提升，同时也收获到了有关开源十分重要的一些思路，希望下半年可以走上开源之路。Vite+ 的概念我十分看好，希望未来 Vite 能成为前端开发工具链的最佳实践，我也希望在这条路上我能通过开源社区提供一些微小的贡献。这次也是面对面接触到开源社区大佬的一次机会，和 antfu、尤大、sxzz 等大佬进行交流并合影集邮，收获颇丰。",
+        "labels": [
+          "Vue.js",
+          "Vite",
+          "Rust",
+          "!Vue Conf"
+        ]
+      }
+    ],
+    "2025-06-01": [
+      {
+        "title": "Dify AI 开发平台",
+        "description": "第一次接触到 Dify 这种 AI 应用开发平台，和开源社区的 n8n 类似，都是通过拖拉拽的方式来构建 AI 应用的工作流、Chatflow 等。开发过程中也学习了 RAG、知识库相关的知识，使用 Dify 开发了一个 A/B 实验的 AI 实验报告工作流，通过解析用户提供的产品需求文档，结合业务知识库进行 NL2SQL，再通过 Hive 查询，最终借助大模型能力生成实验报告并提供总结性结论。",
+        "labels": [
+          "!Dify",
+          "n8n",
+          "!AI",
+          "!Workflow",
+          "!Chatflow"
+        ]
+      }
+    ],
+    "2024-11-04": [
+      {
+        "title": "第一个 NPM 包",
+        "description": "在开发过程中遇到了 ant-design-vue 升级 breaking change 的问题，在 React 版本中发现官方有提供 codemod 去修改代码，但 Vue 版本没有。我基于之前开发时使用到的 ast 的经验，结合社区同学提供的 ast-grep 库，开发了一个 codemod 工具，并发布到了 npm 上。同时发布到了掘金和 Github Discussion 中，算是第一次在社区中分享自己的代码。",
+        "labels": [
+          "NPM",
+          "Ant Design",
+          "!codemod",
+          "!ast-grep"
+        ]
+      }
+    ],
+    "2024-08-01": [
+      {
+        "title": "第一个 React & H5 生产项目",
+        "description": "在 7 月多的时候接到的紧急需求，当时我想着是一个 to c 产品的机会，就接下来了，到最后发现这个项目其实是一个面向老板编程的项目（苦笑）。这个产品当时催得很急，而我正好又想使用 react 来写（当时是考虑到学习新技术栈，同时也因为 react 有更好的移动端 ui 框架），12天边学边开发上线，也算是我在工作以来做得最快的一个项目了。深入学习 React 时，很直观的一个差异点是 Vue 有许多开箱即用的功能，而 React 中这些功能都需要自己实现，或者通过第三方库去支持，需要对比不同的方案有什么差异、优劣势在哪里，是一种新的学习体验。",
+        "labels": [
+          "React",
+          "HTML5"
+        ]
+      }
+    ],
     "2024-03-01": [
       {
         "title": "大模型在人才招聘领域应用落地",
@@ -189,7 +246,7 @@
         "description": "确定毕业后从事 Web 前端开发岗位工作，开始通过借阅图书馆相关书籍、网络社区教程等途径以较为系统化的方式学习相关技术知识，同时开始总结项目经历，准备简历寻找实习工作。",
         "labels": [
           "HTML5",
-          "CSS3",
+          "CSS",
           "JavaScript",
           "Mdn Web Docs"
         ]
@@ -214,7 +271,7 @@
         "description": "大二下学期，有了之前软件开发比赛的经验，也有了和同学一起开发项目的想法。此时接到了学校部门的一个教务管理系统的开发需求，最初是考虑 Web + 安卓双端，最后敲定只使用 Web 方案。在敲定方案后，我通过 Bilibili 开始学习前端，一周速成 Vue2 框架与 Element-UI 组件库，并开始上手尝试进行开发。",
         "labels": [
           "HTML5",
-          "CSS3",
+          "CSS",
           "JavaScript",
           "Vue.js",
           "!Element-UI"
@@ -257,10 +314,10 @@
         "description": "大学期间选择了加入校团委，在这里面学会了制作公众号推文，基础的 PS、LR、PR、AE 操作。",
         "labels": [
           "WeChat",
-          "Adobe Photoshop",
-          "Adobe Lightroom",
-          "Adobe Premiere Pro",
-          "Adobe After Effects"
+          "!Adobe Photoshop",
+          "!Adobe Lightroom",
+          "!Adobe Premiere Pro",
+          "!Adobe After Effects"
         ]
       }
     ],
